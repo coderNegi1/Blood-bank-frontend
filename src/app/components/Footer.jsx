@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -14,122 +15,87 @@ export default function Footer() {
         }
       `}</style>
 
-      <footer className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-700  bg-red-300">
-        <div className="flex flex-wrap items-start gap-10 md:gap-[60px] xl:gap-[140px]">
+      <footer className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-700 bg-red-300">
+        <div className="flex flex-wrap items-start gap-10 md:gap-[60px] xl:gap-[110px]">
           {/* Logo */}
-          <Link href="https://prebuiltui.com">
-            <svg
-              width="31"
-              height="34"
-              viewBox="0 0 31 34"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m8.75 5.3 6.75 3.884 6.75-3.885M8.75 28.58v-7.755L2 16.939m27 0-6.75 3.885v7.754M2.405 9.408 15.5 16.954l13.095-7.546M15.5 32V16.939M29 22.915V10.962a2.98 2.98 0 0 0-1.5-2.585L17 2.4a3.01 3.01 0 0 0-3 0L3.5 8.377A3 3 0 0 0 2 10.962v11.953A2.98 2.98 0 0 0 3.5 25.5L14 31.477a3.01 3.01 0 0 0 3 0L27.5 25.5a3 3 0 0 0 1.5-2.585"
-                stroke="url(#a)"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <defs>
-                <linearGradient
-                  id="a"
-                  x1="15.5"
-                  y1="2"
-                  x2="15.5"
-                  y2="32"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#F8FAFC" />
-                  <stop offset="1" stopColor="#383838" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </Link>
+          <Image
+            src="/Uttarakhand Blood Centre Log.jpg"
+            alt="Uttarakhand Blood Centre Logo"
+            width={100}
+            height={100}
+            className="hover:opacity-80 transition-opacity duration-300 rounded-full"
+            priority
+          />
 
-          {/* Product Section */}
+          {/* Quick Links */}
           <div>
-            <p className="text-slate-100 font-semibold">Product</p>
-            <ul className="mt-2 space-y-2">
-              <li><Link href="/" className="hover:text-indigo-600 transition">Home</Link></li>
-              <li><Link href="/" className="hover:text-indigo-600 transition">Support</Link></li>
-              <li><Link href="/" className="hover:text-indigo-600 transition">Pricing</Link></li>
-              <li><Link href="/" className="hover:text-indigo-600 transition">Affiliate</Link></li>
+            <p className="text-slate-100 font-semibold mb-3">Quick Links</p>
+            <ul className="space-y-2">
+              <li><Link href="/" className="hover:text-white transition">Home</Link></li>
+              <li><Link href="/about-us" className="hover:text-white transition">About Us</Link></li>
+              <li><Link href="/blood-availability" className="hover:text-white transition">Blood Availability</Link></li>
+              <li><Link href="/donation-process" className="hover:text-white transition">Donation Process</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Resources Section */}
+          {/* Media */}
           <div>
-            <p className="text-slate-100 font-semibold">Resources</p>
-            <ul className="mt-2 space-y-2">
-              <li><Link href="/" className="hover:text-indigo-600 transition">Company</Link></li>
-              <li><Link href="/" className="hover:text-indigo-600 transition">Blogs</Link></li>
-              <li><Link href="/" className="hover:text-indigo-600 transition">Community</Link></li>
-             
-              <li><Link href="/" className="hover:text-indigo-600 transition">About</Link></li>
+            <p className="text-slate-100 font-semibold mb-3">Media</p>
+            <ul className="space-y-2">
+              <li><Link href="/events" className="hover:text-white transition">Events</Link></li>
+              <li><Link href="/blogs" className="hover:text-white transition">Blogs</Link></li>
+              <li><Link href="/gallery" className="hover:text-white transition">Gallery</Link></li>
             </ul>
           </div>
 
-          {/* Legal Section */}
+          {/* Legal */}
           <div>
-            <p className="text-slate-100 font-semibold">Legal</p>
-            <ul className="mt-2 space-y-2">
-              <li><Link href="/" className="hover:text-indigo-600 transition">Privacy</Link></li>
-              <li><Link href="/" className="hover:text-indigo-600 transition">Terms</Link></li>
+            <p className="text-slate-100 font-semibold mb-3">Legal</p>
+            <ul className="space-y-2">
+              <li><Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
+              <li><Link href="/jury-policy" className="hover:text-white transition">Jury Policy</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Right Section */}
         <div className="flex flex-col max-md:items-center max-md:text-center gap-2 items-end">
-          <p className="max-w-60">
-            Making every customer feel valued—no matter the size of your audience.
+          <p className="max-w-60 text-slate-100">
+            Donate blood, save lives — Together we can make a difference.
           </p>
 
           {/* Social Icons */}
           <div className="flex items-center gap-4 mt-3">
-            <Link href="https://dribbble.com/prebuiltui" target="_blank" rel="noreferrer">
+            <Link href="#" target="_blank" rel="noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                className="hover:text-indigo-500">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
-                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
-                <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
+                className="hover:text-white transition">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
             </Link>
 
-            <Link href="https://www.linkedin.com/company/prebuiltui" target="_blank" rel="noreferrer">
+            <Link href="#" target="_blank" rel="noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                className="hover:text-indigo-500">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect width="4" height="12" x="2" y="9" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </Link>
-
-            <Link href="https://x.com/prebuiltui" target="_blank" rel="noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                className="hover:text-indigo-500">
+                className="hover:text-white transition">
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
               </svg>
             </Link>
 
-            <Link href="https://www.youtube.com/@prebuiltui" target="_blank" rel="noreferrer">
+            <Link href="#" target="_blank" rel="noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                className="hover:text-indigo-500">
-                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-                <path d="m10 15 5-3-5-3z" />
+                className="hover:text-white transition">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
               </svg>
             </Link>
           </div>
 
-          <p className="mt-3 text-center">
-            © 2025 <Link href="https://prebuiltui.com">PrebuiltUI</Link>
+          <p className="mt-3 text-center text-slate-100">
+            © 2025 Uttarakhand Blood Centre
           </p>
         </div>
       </footer>

@@ -8,8 +8,8 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about-us" },
-    { 
-      name: "Media", 
+    {
+      name: "Media",
       path: "#",
       dropdown: [
         { name: "Events", path: "/events" },
@@ -37,25 +37,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${
-        isScrolled
-          ? "bg-white/70 shadow-md text-gray-700 backdrop-blur-lg py-4 md:py-4"
-          : "bg-[#BC003D] py-6 md:py-6"
-      }`}
+      className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled
+          ? "bg-white/70 shadow-md text-gray-700 backdrop-blur-lg py-1"
+          : "bg-[#BC003D] py-4"
+        }`}
     >
       {/* ---------- Logo ---------- */}
       <Link href="/" className="flex items-center gap-2">
-        <svg
-          width="157"
-          height="40"
-          viewBox="0 0 157 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`h-9 ${isScrolled && "invert opacity-80"}`}
-        >
-          {/* your SVG content here */}
-        </svg>
+        <img
+          src="/Uttarakhand Blood Centre Log.jpg" // 👈 path from public folder
+          alt="Uttarakhand Blood Centre"
+          className={`h-20 w-auto transition-all duration-300 rounded-full ${isScrolled ? " opacity-80" : ""
+            }`}
+        />
       </Link>
+
 
       {/* ---------- Desktop Nav ---------- */}
       <div className="hidden md:flex items-center gap-4 lg:gap-8">
@@ -68,20 +64,17 @@ const Navbar = () => {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`flex items-center gap-1 ${
-                  isScrolled ? "text-gray-700" : "text-white"
-                }`}
+                className={`flex items-center gap-1 ${isScrolled ? "text-gray-700" : "text-white"
+                  }`}
               >
                 {link.name}
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  openDropdown === link.name ? 'rotate-180' : ''
-                }`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === link.name ? 'rotate-180' : ''
+                  }`} />
               </button>
-              
+
               {/* Dropdown Menu */}
-              <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transition-all duration-200 ${
-                openDropdown === link.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-              }`}>
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transition-all duration-200 ${openDropdown === link.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                }`}>
                 {link.dropdown.map((item, idx) => (
                   <Link
                     key={idx}
@@ -97,15 +90,13 @@ const Navbar = () => {
             <Link
               key={i}
               href={link.path}
-              className={`group flex flex-col gap-0.5 ${
-                isScrolled ? "text-gray-700" : "text-white"
-              }`}
+              className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"
+                }`}
             >
               {link.name}
               <div
-                className={`${
-                  isScrolled ? "bg-gray-700" : "bg-white"
-                } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
+                className={`${isScrolled ? "bg-gray-700" : "bg-white"
+                  } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
               />
             </Link>
           )
@@ -130,9 +121,8 @@ const Navbar = () => {
 
       {/* ---------- Mobile Menu ---------- */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <button
           className="absolute top-4 right-4"
@@ -158,9 +148,8 @@ const Navbar = () => {
                 className="flex items-center gap-1 font-semibold"
               >
                 {link.name}
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  openDropdown === link.name ? 'rotate-180' : ''
-                }`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === link.name ? 'rotate-180' : ''
+                  }`} />
               </button>
               {openDropdown === link.name && (
                 <div className="flex flex-col items-center gap-2 pl-4">

@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Uttarakhand Blood Centre",
   description: "Donate blood, save lives — Official Blood Donation Platform.",
+  icons: {
+    icon: "/Uttarakhand Blood Centre Log.jpg", // image path — public folder ke andar
+  },
 };
 
 export default function RootLayout({ children }) {
