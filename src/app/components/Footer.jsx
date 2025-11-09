@@ -7,14 +7,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      {/* Font Import */}
-      <style jsx global>{`
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-        * {
-          font-family: "Poppins", sans-serif;
-        }
-      `}</style>
-
       <footer className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-700 bg-red-300">
         <div className="flex flex-wrap items-start gap-10 md:gap-[60px] xl:gap-[110px]">
           {/* Logo */}

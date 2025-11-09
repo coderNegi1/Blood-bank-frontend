@@ -284,13 +284,7 @@ const DonationProcessPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-        .font-sans { font-family: 'Inter', sans-serif; }
-      `}</style>
-
+    <div className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto p-6 lg:p-10">
         
         {/* Header Section */}
