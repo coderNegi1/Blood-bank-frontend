@@ -10,24 +10,26 @@ const Navbar = () => {
     { name: "About Us", path: "/about-us" },
     {
       name: "Media",
-      path: "#",
       dropdown: [
         { name: "Events", path: "/events" },
         { name: "Blogs", path: "/blogs" },
         { name: "Gallery", path: "/gallery" },
       ]
     },
-    // { name: "Donate Blood", path: "/donate" },
     { name: "Blood Availability", path: "/blood-availability" },
     { name: "Donation Process", path: "/donation-process" },
-    // { name: "Find Blood", path: "/find-blood" },
     { name: "Contact", path: "/contact" },
-    // { name: "Admin", path: "/admin" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+
+  // 🌟 KEY FIX → Prevent SSR mismatch
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -35,27 +37,30 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrolled = isClient && isScrolled;
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled
+      className={`fixed top-0 left-0 w-full flex items-center justify-between
+      px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50
+      ${scrolled
           ? "bg-white/70 shadow-md text-gray-700 backdrop-blur-lg py-1"
           : "bg-[#BC003D] py-4"
         }`}
     >
-      {/* ---------- Logo ---------- */}
+      {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <img
-          src="/Uttarakhand Blood Centre Log.jpg" // 👈 path from public folder
+          src="/Uttarakhand Blood Centre Log.jpg"
           alt="Uttarakhand Blood Centre"
-          className={`h-20 w-auto transition-all duration-300 rounded-full ${isScrolled ? " opacity-80" : ""
-            }`}
+          className={`h-20 w-auto transition-all rounded-full duration-300
+          ${scrolled ? "opacity-80" : ""}`}
         />
       </Link>
 
-
-      {/* ---------- Desktop Nav ---------- */}
+      {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-4 lg:gap-8">
-        {navLinks.map((link, i) => (
+        {navLinks.map((link, i) =>
           link.dropdown ? (
             <div
               key={i}
@@ -64,22 +69,31 @@ const Navbar = () => {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`flex items-center gap-1 ${isScrolled ? "text-gray-700" : "text-white"
-                  }`}
+                className={`flex items-center gap-1 ${
+                  scrolled ? "text-gray-700" : "text-white"
+                }`}
               >
                 {link.name}
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === link.name ? 'rotate-180' : ''
-                  }`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    openDropdown === link.name ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
-              {/* Dropdown Menu */}
-              <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transition-all duration-200 ${openDropdown === link.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                }`}>
+              <div
+                className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border
+                transition-all duration-200
+                ${openDropdown === link.name
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-2"
+                }`}
+              >
                 {link.dropdown.map((item, idx) => (
                   <Link
                     key={idx}
                     href={item.path}
-                    className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200"
+                    className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600"
                   >
                     {item.name}
                   </Link>
@@ -90,24 +104,25 @@ const Navbar = () => {
             <Link
               key={i}
               href={link.path}
-              className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"
-                }`}
+              className={`group flex flex-col gap-0.5 ${
+                scrolled ? "text-gray-700" : "text-white"
+              }`}
             >
               {link.name}
               <div
-                className={`${isScrolled ? "bg-gray-700" : "bg-white"
-                  } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
+                className={`${scrolled ? "bg-gray-700" : "bg-white"}
+                h-0.5 w-0 group-hover:w-full transition-all`}
               />
             </Link>
           )
-        ))}
+        )}
       </div>
 
-      {/* ---------- Mobile Menu Button ---------- */}
+      {/* Mobile Menu Button */}
       <div className="flex items-center gap-3 md:hidden">
         <svg
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`h-6 w-6 cursor-pointer ${isScrolled ? "invert" : ""}`}
+          className={`h-6 w-6 cursor-pointer ${scrolled ? "invert" : ""}`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -119,10 +134,11 @@ const Navbar = () => {
         </svg>
       </div>
 
-      {/* ---------- Mobile Menu ---------- */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+        className={`fixed top-0 left-0 w-full h-screen bg-white flex flex-col md:hidden
+        items-center justify-center gap-6 transition-all duration-500
+        ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <button
           className="absolute top-4 right-4"
@@ -140,17 +156,23 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {navLinks.map((link, i) => (
+        {navLinks.map((link, i) =>
           link.dropdown ? (
             <div key={i} className="flex flex-col items-center gap-3">
               <button
-                onClick={() => setOpenDropdown(openDropdown === link.name ? null : link.name)}
+                onClick={() =>
+                  setOpenDropdown(openDropdown === link.name ? null : link.name)
+                }
                 className="flex items-center gap-1 font-semibold"
               >
                 {link.name}
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === link.name ? 'rotate-180' : ''
-                  }`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    openDropdown === link.name ? "rotate-180" : ""
+                  }`}
+                />
               </button>
+
               {openDropdown === link.name && (
                 <div className="flex flex-col items-center gap-2 pl-4">
                   {link.dropdown.map((item, idx) => (
@@ -161,7 +183,7 @@ const Navbar = () => {
                         setIsMenuOpen(false);
                         setOpenDropdown(null);
                       }}
-                      className="text-gray-600 hover:text-red-600 transition-colors"
+                      className="text-gray-600 hover:text-red-600"
                     >
                       {item.name}
                     </Link>
@@ -170,11 +192,15 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Link key={i} href={link.path} onClick={() => setIsMenuOpen(false)}>
+            <Link
+              key={i}
+              href={link.path}
+              onClick={() => setIsMenuOpen(false)}
+            >
               {link.name}
             </Link>
           )
-        ))}
+        )}
       </div>
     </nav>
   );

@@ -46,17 +46,17 @@ const HeroSection = () => {
 
 
   return (
-    <section className="relative h-screen bg-white overflow-hidden flex items-center font-inter">
+    <section className="relative h-full bg-white overflow-hidden flex items-center font-inter">
       
       {/* 1. Sajaawati (Decorative) Blood Drop Aakaar (Left) */}
       {CurvedBackground}
 
       {/* 2. Content Container (Right) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20 md:py-32">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 mt-20">
         <div className="flex justify-end">
           
           {/* Content block: takes up half the width on medium screens and less on large screens */}
-          <div className="w-full md:w-1/2 lg:w-5/12 ml-auto ">
+          <div className="w-full md:w-1/2 lg:w-6/12 ml-auto ">
             
             {/* Main Heading (Mukhya Sheershak) */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
@@ -64,8 +64,8 @@ const HeroSection = () => {
             </h1>
 
             {/* Body Text (Mukhya Vichaar) */}
-            <p className="text-base text-gray-600 mb-10 max-w-md text-justify   ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <p className="text-base text-gray-600 mb-10 max-w-lg text-justify   ">
+            Uttarakhand Blood Center in Dehradun is committed to saving lives by ensuring safe, timely, and accessible blood for everyone in need. Every drop of blood you donate becomes a lifeline for someone fighting illness, undergoing surgery, or facing an emergency. Join us in our mission to build a healthier, safer, and more compassionate Uttarakhand — where every donation brings hope, strength, and a second chance at life. 
               
             </p>
 

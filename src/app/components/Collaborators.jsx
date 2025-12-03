@@ -1,19 +1,18 @@
 import React from 'react';
 
 const initialCollaborators = [
-  { name: 'NCC', color: 'text-red-500' },
-  { name: 'NSS', color: 'text-blue-500' },
-  { name: 'YMCA', color: 'text-green-500' },
-  { name: 'Google', color: 'text-yellow-600' },
-  { name: 'Microsoft', color: 'text-gray-800' },
-  { name: 'Red Cross', color: 'text-red-700' },
+  { 
+    name: 'Collaborators will be added soon...', 
+    color: 'text-gray-500 italic' 
+  },
 ];
+
 
 const collaborators = [...initialCollaborators, ...initialCollaborators];
 
 const Collaborators = () => {
   return (
-    <div className="bg-white py-16 sm:py-24">
+    <div className="bg-white py-8">
       <style>{`
         @keyframes marquee-scroll {
           0% { transform: translateX(0); }
@@ -39,18 +38,18 @@ const Collaborators = () => {
           </h2>
           
           <div 
-            className="w-full overflow-hidden relative py-12 border-y border-gray-100 group pause-on-hover"
+            className="w-full overflow-hidden relative  border-y border-gray-100 group pause-on-hover"
             aria-hidden="true"
           >
             <div className="marquee flex items-center min-w-full">
               {collaborators.map((collaborator, index) => (
                 <div
                   key={`${collaborator.name}-${index}`}
-                  className="flex-shrink-0 mx-8 sm:mx-12 lg:mx-16 flex items-center"
-                  style={{ width: '200px' }}
+                  className="flex-shrink-0   flex items-center"
+                  style={{ width: '800px' }}
                 >
                   <span 
-                    className={`text-5xl sm:text-6xl font-extrabold transition-colors duration-300 ${collaborator.color} opacity-20 hover:opacity-50`}
+                    className={`text-4xl sm:text-4xl font-extrabold transition-colors duration-300 ${collaborator.color} opacity-20 hover:opacity-50`}
                   >
                     {collaborator.name}
                   </span>

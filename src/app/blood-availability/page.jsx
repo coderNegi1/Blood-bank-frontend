@@ -48,7 +48,7 @@ export default function BloodAvailabilityPage() {
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-white py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 mt-16 md:mt-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-3">
             🩸 Uttarakhand Blood Bank
           </h1>
@@ -67,8 +67,8 @@ export default function BloodAvailabilityPage() {
             const units = stock ? stock.units : 0;
             
             return (
-              <div key={bloodGroup} className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200">
-                <div className={`p-6 text-center border-2 ${getStockColor(units)}`}>
+              <div key={bloodGroup} className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200">
+                <div className={`p-6 text-center border-2 rounded-2xl ${getStockColor(units)}`}>
                   <div className="text-3xl mb-2">{getStockIcon(units)}</div>
                   <div className="text-2xl font-bold mb-1">{bloodGroup}</div>
                   <div className="text-3xl font-bold">{units}</div>
@@ -124,7 +124,7 @@ export default function BloodAvailabilityPage() {
               </div>
               <div>
                 <strong className="text-red-700">Emergency Contact:</strong>
-                <p className="text-gray-700">📞 1800-123-4567</p>
+                <p className="text-gray-700">📞 xxxxxxxxxx</p>
               </div>
               <div>
                 <strong className="text-red-700">Address:</strong>
@@ -142,17 +142,17 @@ export default function BloodAvailabilityPage() {
               </p>
               <div className="flex justify-center space-x-4">
                 <button 
-                  onClick={() => window.location.href = 'tel:1800-123-4567'}
+                  onClick={() => window.location.href = '/contact'}
                   className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition duration-200"
                 >
-                  📞 Call Now
+                   Contact 
                 </button>
-                <button 
+                {/* <button 
                   onClick={() => window.location.href = '/donate'}
                   className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition duration-200"
                 >
                   🩸 Donate Blood
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

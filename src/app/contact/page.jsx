@@ -136,8 +136,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-600">
-                      info@uttarakhandblood.org<br />
-                      support@uttarakhandblood.org
+                      ...<br />
+                      ....
                     </p>
                   </div>
                 </div>
@@ -151,16 +151,12 @@ export default function ContactPage() {
               </h3>
               <div className="space-y-2 text-gray-600">
                 <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span className="font-semibold">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span className="font-semibold">9:00 AM - 2:00 PM</span>
+                  <span>Monday - Saturday:</span>
+                  <span className="font-semibold">24 Hours</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sunday:</span>
-                  <span className="font-semibold text-red-600">Closed</span>
+                  <span className="font-semibold">24 Hours</span>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ import MissionSection from "@/app/components/Mission";
 export default function HomePage() {
   return (
     <main className="bg-gray-50 text-gray-900 ">
-      <section id="hero">
+      <section id="hero" className="mt-16">
         <HeroSection />
       </section>
 
