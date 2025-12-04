@@ -3,7 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+const API_CONFIG = {
+    MY_BLOOD_BANK_ID: 'BB_UK_001', 
+    MY_BLOOD_BANK_NAME: 'Uttarakhand Blood Center', 
+};
 export default function Footer() {
   return (
     <>
@@ -89,6 +92,10 @@ export default function Footer() {
           <p className="mt-3 text-center text-slate-100">
             © 2025 Uttarakhand Blood Centre
           </p>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 text-center text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} {API_CONFIG.MY_BLOOD_BANK_NAME}. All rights reserved. | Dedicated to safe blood supply in Uttarakhand.
         </div>
       </footer>
     </>

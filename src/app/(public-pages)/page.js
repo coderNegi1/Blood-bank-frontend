@@ -18,7 +18,7 @@ export default function HomePage() {
         <BloodWorkflowPage />
       </section>
 
-      <section id="collaborators" className="mt-16 mb-12">
+      <section id="collaborators" className="mt-16 ">
         <Collaborators />
       </section>
     </main>

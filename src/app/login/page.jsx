@@ -157,12 +157,12 @@ export default function AdminLoginPage() {
           <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
             <h4 className="text-sm font-semibold text-blue-800 mb-2">Demo Credentials:</h4>
             <div className="text-xs text-blue-700 space-y-1">
-              <p><strong>Email:</strong> admin@uttarakhandbloodbank.com</p>
+              <p><strong>Email:</strong> admin@ukblood.org</p>
               <p><strong>Password:</strong> admin123</p>
             </div>
             <button
               type="button"
-              onClick={() => setFormData({ email: "admin@uttarakhandbloodbank.com", password: "admin123" })}
+              onClick={() => setFormData({ email: "admin@ukblood.org", password: "admin123" })}
               className="mt-3 w-full text-xs bg-blue-600 text-white py-2 px-3 rounded hover:bg-blue-700 transition duration-200"
             >
               Fill Demo Credentials
