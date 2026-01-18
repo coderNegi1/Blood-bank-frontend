@@ -51,7 +51,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <img
-          src="/Uttarakhand Blood Centre Log.jpg"
+          src="/ukbloodcentreLogo.jpg"
           alt="Uttarakhand Blood Centre"
           className={`h-20 w-auto transition-all rounded-full duration-300
           ${scrolled ? "opacity-80" : ""}`}
