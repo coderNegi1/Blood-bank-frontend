@@ -60,7 +60,7 @@ export default function MissionSection() {
             Our Mission
           </h2>
           <p className="max-w-4xl mx-auto text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            We serve as the lifeline of our community, ensuring a safe, reliable, and compassionate supply of blood for every patient in need. Our mission extends beyond collection — it’s about connecting humanity, promoting awareness, and saving lives through integrity and dedication.
+            Our mission is to support the vision of safe and adequate blood for all, as guided by the National Blood Transfusion Council (NBTC) and World Health Organization (WHO). We promote 100% voluntary blood donation and work to ensure a safe, reliable, and quality blood supply for every patient in need.
           </p>
         </div>
 

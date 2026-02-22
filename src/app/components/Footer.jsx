@@ -39,8 +39,7 @@ export default function App() {
              </div>
           </div>
           <p className="text-sm leading-relaxed text-slate-400">
-            Dedicated to providing safe and accessible blood supply across Uttarakhand. 
-            A unit of Parvatiya Manav Utthan Samiti.
+           A unit of Parvatiya Manav Utthan Samiti.
           </p>
           <div className="flex gap-4">
             {/* Social Media placeholders */}

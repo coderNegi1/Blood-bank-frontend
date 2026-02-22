@@ -19,16 +19,7 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-[#fcfcfd] flex flex-col items-center justify-center p-4 md:p-8 mt-28 md:mt-8">
       {/* Top Banner for Urgent Requirements */}
-      <div className="w-full max-w-7xl mb-6 bg-red-600 text-white px-6 py-3 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg shadow-red-100 animate-pulse">
-        <div className="flex items-center gap-3">
-          <AlertCircle size={20} className="hidden md:block" />
-          <p className="font-bold text-sm md:text-base">24/7 Emergency Blood Support Available</p>
-        </div>
-        <a href="tel:01352974312" className="bg-white text-red-600 px-4 py-1 rounded-full text-sm font-black uppercase hover:bg-slate-100 transition-colors">
-          Call Emergency
-        </a>
-      </div>
-
+   
       <div className="max-w-7xl w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
 
         {/* Contact Information Panel */}
@@ -49,33 +40,15 @@ const ContactUs = () => {
                 </p>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight pt-2">
+            <h1 className="text-4xl md:text-4xl font-black text-slate-900 tracking-tight pt-2">
               Save a Life Today.
             </h1>
-            <p className="text-slate-500 text-lg max-w-md leading-relaxed">
+            <p className="text-slate-500 text-sm max-w-md leading-relaxed">
               Serving the community with safe, high-quality blood and blood products. Reach out for donations or emergency requests.
             </p>
           </div>
 
-          {/* Quick Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pb-4">
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-              <Heart className="text-red-500 mb-2" size={20} />
-              <p className="text-xs font-bold text-slate-400 uppercase">Donors</p>
-              <p className="text-lg font-black text-slate-800">10k+</p>
-            </div>
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-              <Activity className="text-blue-500 mb-2" size={20} />
-              <p className="text-xs font-bold text-slate-400 uppercase">Success Rate</p>
-              <p className="text-lg font-black text-slate-800">100%</p>
-            </div>
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 col-span-2 md:col-span-1">
-              <Clock className="text-orange-500 mb-2" size={20} />
-              <p className="text-xs font-bold text-slate-400 uppercase">Response</p>
-              <p className="text-lg font-black text-slate-800">Immediate</p>
-            </div>
-          </div>
-
+       
           {/* Details Grid */}
           <div className="grid gap-8">
             {/* Address */}
@@ -103,6 +76,9 @@ const ContactUs = () => {
                 <div className="flex flex-col gap-1 text-slate-700 font-bold">
                   <a href="tel:+919084311316" className="hover:text-red-600 transition-colors flex items-center gap-2">
                     <span className="text-slate-400 text-xs font-normal uppercase tracking-widest w-12">Mobile</span> +91-9084311316
+                  </a>
+                  <a href="tel:+917456909619" className="hover:text-red-600 transition-colors flex items-center gap-2">
+                    <span className="text-slate-400 text-xs font-normal uppercase tracking-widest w-12">Mobile</span> +91-7456909619
                   </a>
                   <a href="tel:01352974312" className="hover:text-red-600 transition-colors flex items-center gap-2">
                     <span className="text-slate-400 text-xs font-normal uppercase tracking-widest w-12">Office</span> 0135-2974312
@@ -134,7 +110,7 @@ const ContactUs = () => {
           <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="relative">
-                <Clock className="text-red-600" size={24} />
+                <Clock className="text-green-600" size={24} />
                 {/* Chhota green dot jo hamesha active hone ka signal deta hai */}
                 <span className="absolute -top-1 -right-1 flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -143,10 +119,10 @@ const ContactUs = () => {
               </div>
               <div>
                 <p className="text-sm font-bold text-slate-900 leading-tight">
-                  Donation Hours: <span className="text-slate-500 font-medium">9:00 AM - 8:00 PM</span>
+                  Donation Hours:
                 </p>
-                <p className="text-[11px] font-black text-red-600 tracking-wider uppercase mt-0.5">
-                  Emergency Service: 24/7 Available
+                <p className="text-[11px] font-black text-yellow-400 tracking-wider uppercase mt-0.5">
+                  24/7 Available
                 </p>
               </div>
             </div>

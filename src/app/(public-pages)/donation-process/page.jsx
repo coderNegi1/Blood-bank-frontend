@@ -1,8 +1,8 @@
+
 "use client"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // === EMBEDDED DATA START ===
-// Data moved here to resolve file import issues in the development environment.
 const donationTypes = [
   {
     id: 'whole-blood',
@@ -53,6 +53,31 @@ const donationTypes = [
       "Trauma patients with active bleeding",
     ],
     fact: "Apheresis uses a centrifuge to separate and collect only the needed component (platelets), returning the rest of the blood safely to the donor.",
+  },
+  {
+    id: 'platelets-rdp',
+    name: "Platelets (RDP) Donation",
+    shortName: "Platelets (RDP)",
+    description: "Random Donor Platelets (RDP) are prepared from whole blood donations. Platelets from multiple donors are pooled together to provide the required dose for patients. It is the most common and widely available form of platelet support.",
+    steps: [
+      { title: "Registration & History", desc: "Donor registration and basic medical history are recorded to ensure eligibility." },
+      { title: "Screening & Vitals", desc: "Hemoglobin level, blood pressure, temperature, and pulse are checked before donation." },
+      { title: "Whole Blood Donation", desc: "Whole blood is collected from the donor, and later platelets are separated from it in the laboratory." },
+      { title: "Duration of Process", desc: "The blood donation process usually takes 8 to 10 minutes, while the total visit may take around 30 minutes." },
+      { title: "Post Donation Care", desc: "Donor is advised to rest, drink fluids, and avoid heavy physical activity for the rest of the day." },
+    ],
+    eligibility: [
+      "✅ Age: 18–65 years",
+      "✅ Weight: Minimum 50 kg",
+      "✅ Interval: Whole blood donation interval is typically 3 months for males and 4 months for females.",
+      "❌ Restrictions: Donor must be healthy and free from infections or major illnesses.",
+    ],
+    usedFor: [
+      "Dengue patients with low platelet count",
+      "Cancer patients undergoing chemotherapy",
+      "Patients with bleeding disorders or severe infections",
+    ],
+    fact: "RDP platelets are obtained from whole blood and usually pooled from multiple donors to make one therapeutic dose.",
   },
   {
     id: 'plasma-donation',
@@ -151,22 +176,15 @@ const donationTypes = [
 ];
 // === EMBEDDED DATA END ===
 
-
-// Simple custom collapsible component
-// This component manages its open/close state and renders the detailed content.
 const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
   const RedAccent = "text-[#BC003D]";
   const LightRedBG = "bg-red-50 border-l-4 border-[#BC003D]";
 
-  // --- Reusable Component Blocks ---
-
-  // Component 2: Donation Process (Vertical Timeline)
   const DonationProcess = ({ steps }) => (
     <div className="space-y-6 relative border-l border-gray-200 ml-3 py-4">
       <h3 className={`text-xl font-semibold mb-6 ${RedAccent}`}>Donation Process (Step-by-Step)</h3>
       {steps.map((step, index) => (
         <div key={index} className="relative pl-8">
-          {/* Timeline Dot/Icon */}
           <div className={`absolute -left-3 top-1 w-6 h-6 rounded-full ${RedAccent} bg-white border-2 border-[#BC003D] flex items-center justify-center text-white text-xs font-bold`}>
             {index + 1}
           </div>
@@ -179,7 +197,6 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
     </div>
   );
 
-  // Component 3: Donor Eligibility
   const DonorEligibility = ({ eligibility }) => (
     <div className="mt-8">
       <h3 className={`text-xl font-semibold mb-4 ${RedAccent}`}>Donor Eligibility & Frequency</h3>
@@ -196,7 +213,6 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
     </div>
   );
 
-  // Component 4: Used For
   const UsedFor = ({ usedFor }) => (
     <div className="mt-8">
       <h3 className={`text-xl font-semibold mb-4 ${RedAccent}`}>Kahan Use Hota Hai (Recipients)</h3>
@@ -208,7 +224,6 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
     </div>
   );
 
-  // Component 5: Key Facts (Info Box)
   const KeyFacts = ({ fact }) => (
     <div className={`mt-8 ${LightRedBG} p-4 rounded-lg shadow-inner`}>
       <p className="font-bold text-[#BC003D] flex items-center">
@@ -221,15 +236,12 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
     </div>
   );
 
-
-  // --- Main Accordion Content ---
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div id={component.id} className="scroll-mt-10 border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <button
         onClick={toggleAccordion}
         className="w-full text-left p-6 flex justify-between items-center bg-white hover:bg-red-50 focus:outline-none transition duration-150"
       >
-        {/* Component Name & Description Snippet */}
         <div>
           <h2 className={`font-extrabold text-2xl md:text-3xl ${RedAccent}`}>
             <span className="mr-2">🩸</span> {component.name}
@@ -238,26 +250,17 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
             {component.description.substring(0, 100)}... (Tap to see full details)
           </p>
         </div>
-        {/* Chevron Icon */}
         <svg
-          className={`w-6 h-6 transform transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : 'rotate-0'
-          } ${RedAccent}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'} ${RedAccent}`}
+          fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
         </svg>
       </button>
 
-      {/* Collapsible Content Area */}
       {isOpen && (
         <div className="p-6 pt-0 bg-white border-t border-gray-200">
-          {/* Full Description */}
-          <p className="text-gray-800 mb-6">{component.description}</p>
-
+          <p className="text-gray-800 mb-6 mt-4">{component.description}</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="md:col-span-1">
               <DonationProcess steps={component.steps} />
@@ -274,10 +277,23 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
   );
 };
 
-
-// Main Next.js Page Component
 const DonationProcessPage = () => {
-  const [openId, setOpenId] = useState(null); // State to manage which accordion item is open
+  const [openId, setOpenId] = useState(null);
+
+  // Logic to handle hash and open correct accordion on mount
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      setOpenId(hash);
+      // Optional: Smooth scroll to the element
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
@@ -286,8 +302,6 @@ const DonationProcessPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto p-6 lg:p-10">
-        
-        {/* Header Section */}
         <header className="text-center mb-12 pt-8">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#BC003D] mb-4 tracking-tight">
             Comprehensive Guide to Blood Donation Components
@@ -297,7 +311,6 @@ const DonationProcessPage = () => {
           </p>
         </header>
 
-        {/* Dynamic Components Accordion */}
         <div className="space-y-8">
           {donationTypes.map((component) => (
             <AccordionItem
@@ -309,11 +322,8 @@ const DonationProcessPage = () => {
           ))}
         </div>
 
-        {/* Footer Note */}
         <footer className="mt-16 text-center text-sm text-gray-500 p-4 border-t border-gray-200">
-            <p>
-                💡 All eligibility and frequency guidelines are general; always confirm specific requirements with your local blood bank or donation center.
-            </p>
+          <p>💡 All eligibility and frequency guidelines are general; always confirm specific requirements with your local blood bank or donation center.</p>
         </footer>
       </div>
     </div>

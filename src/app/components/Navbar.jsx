@@ -7,15 +7,28 @@ import { ChevronDown } from "lucide-react";
 const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about-us" },
     {
-      name: "Media",
+      name: "About Us",
       dropdown: [
-        { name: "Events", path: "/events" },
-        { name: "Blogs", path: "/blogs" },
-        { name: "Gallery", path: "/gallery" },
+        { name: "About", path: "/about-us" },
+        { name: "certifications", path: "/certifications" },
+        { name: "registrations", path: "/registrations" },
+
       ]
     },
+    { name: "Processing Charges", path: "/processing-charges" },
+
+    // { name: "certifications", path: "/certifications" },
+
+
+    // {
+    //   name: "Media",
+    //   dropdow  n: [
+    //     { name: "Events", path: "/events" },
+    //     { name: "Blogs", path: "/blogs" },
+    //     { name: "Gallery", path: "/gallery" },
+    //   ]
+    // },
     { name: "Blood Availability", path: "/blood-availability" },
     { name: "Donation Process", path: "/donation-process" },
     { name: "Contact", path: "/contact" },
@@ -49,14 +62,19 @@ const Navbar = () => {
         }`}
     >
       {/* Logo */}
-      <Link href="/" className="flex items-center gap-2">
-        <img
-          src="/ukbloodcentreLogo.jpg"
-          alt="Uttarakhand Blood Centre"
-          className={`h-20 w-auto transition-all rounded-full duration-300
+
+      <div>
+        <Link href="/" className="flex items-center gap-2">
+          <img
+            src="/ukbloodcentreLogo.jpg"
+            alt="Uttarakhand Blood Centre"
+            className={`h-20 w-auto transition-all rounded-full duration-300
           ${scrolled ? "opacity-80" : ""}`}
-        />
-      </Link>
+          />
+        </Link>
+        {/* <p className="text-white w-[150px] text-[10px]">A unit of Parvatiya Manav Utthan Samiti.</p> */}
+      </div>
+
 
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-4 lg:gap-8">
@@ -69,15 +87,13 @@ const Navbar = () => {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`flex items-center gap-1 ${
-                  scrolled ? "text-gray-700" : "text-white"
-                }`}
+                className={`flex items-center gap-1 ${scrolled ? "text-gray-700" : "text-white"
+                  }`}
               >
                 {link.name}
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
-                    openDropdown === link.name ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -87,13 +103,13 @@ const Navbar = () => {
                 ${openDropdown === link.name
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-2"
-                }`}
+                  }`}
               >
                 {link.dropdown.map((item, idx) => (
                   <Link
                     key={idx}
                     href={item.path}
-                    className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600"
+                    className="block px-4 py-3 text-gray-700 hover:rounded-lg hover:bg-red-50 hover:text-red-600"
                   >
                     {item.name}
                   </Link>
@@ -104,9 +120,8 @@ const Navbar = () => {
             <Link
               key={i}
               href={link.path}
-              className={`group flex flex-col gap-0.5 ${
-                scrolled ? "text-gray-700" : "text-white"
-              }`}
+              className={`group flex flex-col gap-0.5 ${scrolled ? "text-gray-700" : "text-white"
+                }`}
             >
               {link.name}
               <div
@@ -167,9 +182,8 @@ const Navbar = () => {
               >
                 {link.name}
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
-                    openDropdown === link.name ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
