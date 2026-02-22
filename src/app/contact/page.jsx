@@ -25,28 +25,7 @@ const ContactUs = () => {
         {/* Contact Information Panel */}
         <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 space-y-10">
 
-          {/* Header/Logo Section */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3 group">
-              <div className="w-16 h-16 bg-red-600 rounded-3xl flex items-center justify-center shadow-xl shadow-red-200 group-hover:scale-105 transition-transform">
-                <ShieldCheck className="text-white w-9 h-9" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-none uppercase">
-                  Uttarakhand
-                </h2>
-                <p className="text-red-600 font-bold tracking-[0.25em] text-[10px] uppercase mt-1">
-                  Blood Centre & Research
-                </p>
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-4xl font-black text-slate-900 tracking-tight pt-2">
-              Save a Life Today.
-            </h1>
-            <p className="text-slate-500 text-sm max-w-md leading-relaxed">
-              Serving the community with safe, high-quality blood and blood products. Reach out for donations or emergency requests.
-            </p>
-          </div>
+      
 
        
           {/* Details Grid */}
