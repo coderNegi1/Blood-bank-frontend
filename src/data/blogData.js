@@ -2,7 +2,7 @@
 // CONTENT DATA
 // =======================================================================
 export const API_CONFIG = {
-    MY_BLOOD_BANK_NAME: 'Uttarakhand Blood Center',
+    MY_BLOOD_BANK_NAME: 'Uttarakhand blood centre',
 };
 
 export const contentData = {
@@ -59,7 +59,7 @@ export const contentData = {
             summary: "Collected 350+ units with great enthusiasm from local volunteers.",
             content: `
       <p>During the <strong>Rishikesh Monsoon Blood Donation Camp</strong>, we witnessed overwhelming support from local volunteers, students, and adventure groups. The event lasted 3 days with live music, free medical checkups, and refreshments.</p>
-      <p>In total, <b>356 blood units</b> were collected and distributed to nearby hospitals. The camp was jointly organized by Uttarakhand Blood Center and local NGOs.</p>
+      <p>In total, <b>356 blood units</b> were collected and distributed to nearby hospitals. The camp was jointly organized by Uttarakhand blood centre and local NGOs.</p>
     `,
             gallery: [
                 "https://placehold.co/400x300/e57373/fff?text=Camp+Day+1",

@@ -14,7 +14,7 @@ const BloodBankCharges = () => {
     { id: 'plasma-donation', name: 'Fresh Frozen Plasma (FFP)', govt: 300, pvt: 400, linkId: 'plasma-donation' },
     { id: 'platelets-sdp', name: 'Platelets (SDP/Apheresis) Donation', govt: '---', pvt: 11000, linkId: 'platelets-sdp'},
     { id: 'platelets-rdp', name: 'Platelet Concentrate (RDP)', govt: 300, pvt: 400, linkId: 'platelets-rdp' },
-    { id: 'cryoprecipitate', name: 'Cryoprecipitate', govt: 200, pvt: 200, linkId: 'cryoprecipitate' }
+    // { id: 'cryoprecipitate', name: 'Cryoprecipitate', govt: 200, pvt: 200, linkId: 'cryoprecipitate' }
   ];
 
   // Function to handle redirection to the details page
@@ -101,7 +101,7 @@ const BloodBankCharges = () => {
         </div>
 
         <div className="mt-12 text-center">
-           <p className="text-xs text-gray-400 uppercase font-bold tracking-[0.3em]">© Blood Bank Services - Information Portal</p>
+           <p className="text-xs text-gray-400 uppercase font-bold tracking-[0.3em]">© Blood Centre Services - Information Portal</p>
         </div>
 
       </div>

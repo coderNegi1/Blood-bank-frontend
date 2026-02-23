@@ -19,15 +19,15 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-[#fcfcfd] flex flex-col items-center justify-center p-4 md:p-8 mt-28 md:mt-8">
       {/* Top Banner for Urgent Requirements */}
-   
+
       <div className="max-w-7xl w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
 
         {/* Contact Information Panel */}
         <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 space-y-10">
 
-      
 
-       
+
+
           {/* Details Grid */}
           <div className="grid gap-8">
             {/* Address */}
@@ -38,9 +38,9 @@ const ContactUs = () => {
               <div className="space-y-1">
                 <h3 className="font-bold text-slate-900 text-lg tracking-tight">Visit Our Facility</h3>
                 <p className="text-slate-600 leading-relaxed font-medium">
-                  Ground & First Floor, Uttarakhand Blood Centre,<br />
+                  First Floor, Uttarakhand Blood Centre,<br />
                   100, Haridwar Road, Near Rispana Bridge,<br />
-                  Dehradun, Uttarakhand, India
+                  Dehradun, Uttarakhand, India - 248001
                 </p>
               </div>
             </div>

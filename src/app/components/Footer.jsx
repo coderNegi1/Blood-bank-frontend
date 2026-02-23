@@ -74,7 +74,7 @@ export default function App() {
               <li className="flex items-start gap-3">
                 <span className="text-rose-500 mt-1"><MapPinIcon /></span>
                 <span>
-                  Ground & First Floor, 100, Haridwar Road, 
+                  First Floor, 100, Haridwar Road, 
                   Near Rispana Bridge, Dehradun, <br/>
                   Uttarakhand, India - 248001
                 </span>
@@ -83,6 +83,7 @@ export default function App() {
                 <span className="text-rose-500"><PhoneIcon /></span>
                 <div>
                   <a href="tel:+919084311316" className="hover:text-white block">+91 90843 11316</a>
+                  <a href="tel:917456909619" className="hover:text-white block text-xs opacity-70">+91 74569 09619</a>
                   <a href="tel:01352974312" className="hover:text-white block text-xs opacity-70">0135-2974312</a>
                 </div>
               </li>

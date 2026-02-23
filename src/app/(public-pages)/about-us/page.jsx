@@ -13,17 +13,17 @@ import {
 // =======================================================================
 const API_CONFIG = {
     MY_BLOOD_BANK_ID: 'BB_UK_001',
-    MY_BLOOD_BANK_NAME: 'Uttarakhand Blood Center',
+    MY_BLOOD_BANK_NAME: 'Uttarakhand blood centre',
 };
 
 // =======================================================================
 // DATA: Content
 // =======================================================================
 const aboutContent = {
-    title: "About Uttarakhand Blood Center",
+    title: "About Uttarakhand blood centre",
 
     description:
-        "Our center, inspired by the e-Raktkosh initiative, is committed to ensuring a safe, sufficient, and timely supply of blood and blood components across Uttarakhand. We strictly follow national blood policy standards and focus on quality, safety, and service to save lives.",
+        "Our centre, inspired by the e-Raktkosh initiative, is committed to ensuring a safe, sufficient, and timely supply of blood and blood components across Uttarakhand. We strictly follow national blood policy standards and focus on quality, safety, and service to save lives.",
 
 
     vision: [

@@ -5,15 +5,15 @@ import { ChevronDown, ArrowRight, ArrowLeft, Phone, MapPin, ShieldCheck, HeartHa
 // =======================================================================
 // API CONFIGURATION (REAL API se connect hone par ise change karein)
 // =======================================================================
-// NOTE: Is app ko sirf 'Uttarakhand Blood Center' ke liye banaya gaya hai.
+// NOTE: Is app ko sirf 'Uttarakhand blood centre' ke liye banaya gaya hai.
 const API_CONFIG = {
   // Aapko API Setu par register karne ke baad yeh milega
   API_URL: 'https://demo-eraktkosh.api', // Example (replace with actual)
   API_KEY: 'YOUR_SECRET_KEY_FROM_API_SETU', // Example (replace with actual)
   
   // ****** APNE BLOOD BANK KA UNIQUE ID AUR NAAM YAHAN FIX KARO ******
-  MY_BLOOD_BANK_ID: 'BB_UK_001', // Placeholder for Uttarakhand Blood Center's BB ID
-  MY_BLOOD_BANK_NAME: 'Uttarakhand Blood Center', // Aapka fixed Blood Bank ka naam
+  MY_BLOOD_BANK_ID: 'BB_UK_001', // Placeholder for Uttarakhand blood centre's BB ID
+  MY_BLOOD_BANK_NAME: 'Uttarakhand blood centre', // Aapka fixed Blood Bank ka naam
 };
 
 // DUMMY API function jo async data fetching aur filtering ka simulation karta hai

@@ -30,6 +30,30 @@ const donationTypes = [
     fact: "A single whole blood donation can be separated into three components—RBCs, Platelets, and Plasma—potentially saving up to three lives.",
   },
   {
+    id: 'rbcs',
+    name: "Red Blood Cells (RBC) Product",
+    shortName: "RBCs",
+    description: "Packed Red Blood Cells are typically separated from a whole blood donation. They carry oxygen from the lungs to the rest of the body. They are the most commonly transfused component.",
+    steps: [
+      { title: "Source Donation", desc: "Obtained primarily from a Whole Blood Donation, which is processed in the lab." },
+      { title: "Apheresis Option", desc: "Sometimes, a Double Red Cell Donation (Apheresis) is performed where a machine collects two units of RBCs while returning plasma and platelets to the donor." },
+      { title: "Screening", desc: "For double red cell donation, the donor must meet higher height/weight and hemoglobin criteria." },
+      { title: "Storage", desc: "Stored under refrigeration at 2°C to 6°C." },
+    ],
+    eligibility: [
+      "✅ Age: 18+ years",
+      "✅ Weight: Minimum 45-50 kg (higher for double red cell)",
+      "✅ Interval: Every 3-4 months (whole blood source) or every 6 months (double red cell apheresis).",
+      "❌ Restrictions: Hemoglobin must be verified high enough to safely donate (higher requirement for double red cell).",
+    ],
+    usedFor: [
+      "Patients with severe anemia or chronic blood loss",
+      "Surgical patients who lose blood during the procedure",
+      "Sickle cell patients and those with other blood disorders requiring frequent transfusions.",
+    ],
+    fact: "RBCs must be carefully cross-matched with the recipient's blood type to prevent a life-threatening reaction.",
+  },
+  {
     id: 'platelets-sdp',
     name: "Platelets (SDP/Apheresis) Donation",
     shortName: "Platelets (SDP)",
@@ -104,30 +128,7 @@ const donationTypes = [
     ],
     fact: "Plasma is yellowish in color and can be stored frozen (Fresh Frozen Plasma or FFP) for up to one year.",
   },
-  {
-    id: 'rbcs',
-    name: "Red Blood Cells (RBC) Product",
-    shortName: "RBCs",
-    description: "Packed Red Blood Cells are typically separated from a whole blood donation. They carry oxygen from the lungs to the rest of the body. They are the most commonly transfused component.",
-    steps: [
-      { title: "Source Donation", desc: "Obtained primarily from a Whole Blood Donation, which is processed in the lab." },
-      { title: "Apheresis Option", desc: "Sometimes, a Double Red Cell Donation (Apheresis) is performed where a machine collects two units of RBCs while returning plasma and platelets to the donor." },
-      { title: "Screening", desc: "For double red cell donation, the donor must meet higher height/weight and hemoglobin criteria." },
-      { title: "Storage", desc: "Stored under refrigeration at 2°C to 6°C." },
-    ],
-    eligibility: [
-      "✅ Age: 18+ years",
-      "✅ Weight: Minimum 45-50 kg (higher for double red cell)",
-      "✅ Interval: Every 3-4 months (whole blood source) or every 6 months (double red cell apheresis).",
-      "❌ Restrictions: Hemoglobin must be verified high enough to safely donate (higher requirement for double red cell).",
-    ],
-    usedFor: [
-      "Patients with severe anemia or chronic blood loss",
-      "Surgical patients who lose blood during the procedure",
-      "Sickle cell patients and those with other blood disorders requiring frequent transfusions.",
-    ],
-    fact: "RBCs must be carefully cross-matched with the recipient's blood type to prevent a life-threatening reaction.",
-  },
+
   {
     id: 'cryoprecipitate',
     name: "Cryoprecipitate (Cryo) Product",
@@ -151,28 +152,28 @@ const donationTypes = [
     ],
     fact: "The primary purpose of Cryoprecipitate is to rapidly replace Fibrinogen, a critical clotting protein.",
   },
-  {
-    id: 'granulocytes',
-    name: "Granulocytes Donation",
-    shortName: "Granulocytes",
-    description: "Granulocytes (a type of White Blood Cell - WBC) are specialized immune cells collected via Apheresis, similar to platelets. They are used to treat severe, life-threatening bacterial infections in immunocompromised patients who cannot produce enough of their own.",
-    steps: [
-      { title: "Pre-Donation Treatment", desc: "The donor receives medication (e.g., G-CSF) to temporarily increase the number of granulocytes circulating in the blood, maximizing the collection." },
-      { title: "Apheresis Procedure", desc: "Blood is drawn, and the Apheresis machine selectively collects the granulocytes (and some red cells and plasma). A sedimenting agent is often added to improve separation." },
-      { title: "Duration of Process", desc: "Can take up to 2-3 hours due to the complexity of collection." },
-      { title: "Shelf Life", desc: "Must be used immediately—ideally within 24 hours—as they have an extremely short shelf life." },
-    ],
-    eligibility: [
-      "✅ Age: Typically 18-60 years, excellent health.",
-      "✅ Interval: Up to 6 times a year (must wait at least 48 hours between donations).",
-      "❌ Restrictions: Donors must be screened and willing to receive the mobilization drug (G-CSF). Must not be pregnant.",
-    ],
-    usedFor: [
-      "Severely neutropenic patients (low WBC count) with life-threatening bacterial or fungal infections that are not responding to antibiotics.",
-      "Neonatal sepsis (in rare cases).",
-    ],
-    fact: "Due to the short shelf life and special pre-donation medicine, Granulocyte donations are almost always scheduled specifically for a known, critically ill patient.",
-  },
+  // {
+  //   id: 'granulocytes',
+  //   name: "Granulocytes Donation",
+  //   shortName: "Granulocytes",
+  //   description: "Granulocytes (a type of White Blood Cell - WBC) are specialized immune cells collected via Apheresis, similar to platelets. They are used to treat severe, life-threatening bacterial infections in immunocompromised patients who cannot produce enough of their own.",
+  //   steps: [
+  //     { title: "Pre-Donation Treatment", desc: "The donor receives medication (e.g., G-CSF) to temporarily increase the number of granulocytes circulating in the blood, maximizing the collection." },
+  //     { title: "Apheresis Procedure", desc: "Blood is drawn, and the Apheresis machine selectively collects the granulocytes (and some red cells and plasma). A sedimenting agent is often added to improve separation." },
+  //     { title: "Duration of Process", desc: "Can take up to 2-3 hours due to the complexity of collection." },
+  //     { title: "Shelf Life", desc: "Must be used immediately—ideally within 24 hours—as they have an extremely short shelf life." },
+  //   ],
+  //   eligibility: [
+  //     "✅ Age: Typically 18-60 years, excellent health.",
+  //     "✅ Interval: Up to 6 times a year (must wait at least 48 hours between donations).",
+  //     "❌ Restrictions: Donors must be screened and willing to receive the mobilization drug (G-CSF). Must not be pregnant.",
+  //   ],
+  //   usedFor: [
+  //     "Severely neutropenic patients (low WBC count) with life-threatening bacterial or fungal infections that are not responding to antibiotics.",
+  //     "Neonatal sepsis (in rare cases).",
+  //   ],
+  //   fact: "Due to the short shelf life and special pre-donation medicine, Granulocyte donations are almost always scheduled specifically for a known, critically ill patient.",
+  // },
 ];
 // === EMBEDDED DATA END ===
 
