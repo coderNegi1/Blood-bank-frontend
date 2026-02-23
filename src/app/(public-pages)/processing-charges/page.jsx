@@ -9,12 +9,12 @@ import {
 const BloodBankCharges = () => {
   // Processing data for the pricing table
   const processingData = [
-    { id: 'whole-blood', name: 'Whole Blood ', govt: 1050, pvt: 1000, linkId: 'whole-blood' },
-    { id: 'rbcs', name: 'Packed Red Blood Cells (PRBC)', govt: 1050, pvt: 1000, linkId: 'rbcs' },
-    { id: 'plasma-donation', name: 'Fresh Frozen Plasma (FFP)', govt: 300, pvt: 400, linkId: 'plasma-donation' },
-    { id: 'platelets-sdp', name: 'Platelets (SDP/Apheresis) Donation', govt: '---', pvt: 11000, linkId: 'platelets-sdp'},
-    { id: 'platelets-rdp', name: 'Platelet Concentrate (RDP)', govt: 300, pvt: 400, linkId: 'platelets-rdp' },
-    // { id: 'cryoprecipitate', name: 'Cryoprecipitate', govt: 200, pvt: 200, linkId: 'cryoprecipitate' }
+    { id: 'whole-blood', name: 'Whole Blood ', govt: 1050, pvt: "----", linkId: 'whole-blood' },
+    { id: 'rbcs', name: 'Packed Red Blood Cells (PRBC)', govt: 1050, pvt: "----", linkId: 'rbcs' },
+    { id: 'plasma-donation', name: 'Fresh Frozen Plasma (FFP)', govt: 300, pvt: "---", linkId: 'plasma-donation' },
+    { id: 'platelets-sdp', name: 'Platelets (SDP/Apheresis) Donation', govt: '---', pvt: "-----", linkId: 'platelets-sdp'},
+    { id: 'platelets-rdp', name: 'Platelet Concentrate (RDP)', govt: 300, pvt: "---", linkId: 'platelets-rdp' },
+    // { id: 'cryoprecipitate', name: 'Cryoprecipitate', govt: 200, pvt: "---", linkId: 'cryoprecipitate' }
   ];
 
   // Function to handle redirection to the details page
