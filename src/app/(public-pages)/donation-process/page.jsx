@@ -1,3 +1,4 @@
+"use client";
 // === METADATA ===
 const metadata = {
   title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre",
