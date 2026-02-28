@@ -30,6 +30,7 @@ const Navbar = () => {
     //   ]
     // },
     { name: "Blood Availability", path: "/available-soon" },
+    { name: "Services", path: "/services" },
     { name: "Donation Process", path: "/donation-process" },
     { name: "Contact", path: "/contact" },
   ];

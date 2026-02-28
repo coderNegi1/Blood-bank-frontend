@@ -1,4 +1,4 @@
-"use client"
+"use server"
 import React from 'react';
 import { MapPin, Thermometer, Truck, Wifi, Armchair, ShieldCheck, HeartHandshake, Target, Users, BookOpen, UserCheck, Droplet, CheckCircle, Clock, Zap, Award, Globe, Microscope, TrendingUp, Handshake, CalendarCheck, Map, CornerRightDown } from 'lucide-react';
 import {
@@ -8,12 +8,41 @@ import {
     Scale,
     Trash2,
 } from "lucide-react";
-// =======================================================================
-// CONFIGURATION: Blood Bank Details
-// =======================================================================
-const API_CONFIG = {
-    MY_BLOOD_BANK_ID: 'BB_UK_001',
-    MY_BLOOD_BANK_NAME: 'Uttarakhand blood centre',
+
+const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UK Blood Bank",
+    "url": "https://ukbloodbank.org",
+    "logo": "https://ukbloodbank.org/logo.png",
+    "sameAs": [
+        "https://www.facebook.com/ukbloodbank",
+        "https://twitter.com/ukbloodbank",
+        "https://www.instagram.com/ukbloodbank"
+    ]
+};
+
+const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why choose UK Blood Centre in Dehradun?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As the best blood bank in Dehradun, we offer advanced lab services, strict compliance, and 24x7 availability for emergency needs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What services does UK Blood Centre provide in Uttarakhand?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide PRBC, Platelets, FFP, Pediatric Red Cells, Plasmapheresis, and operate an Advanced Blood Component Lab."
+            }
+        }
+    ]
 };
 
 // =======================================================================
@@ -23,8 +52,7 @@ const aboutContent = {
     title: "About Uttarakhand blood centre",
 
     description:
-        "Our centre, inspired by the e-Raktkosh initiative, is committed to ensuring a safe, sufficient, and timely supply of blood and blood components across Uttarakhand. We strictly follow national blood policy standards and focus on quality, safety, and service to save lives.",
-
+        "As the best blood bank in Dehradun, Uttarakhand, UK Blood Centre is inspired by the e-Raktkosh initiative and committed to ensuring a safe, sufficient, and timely supply of blood and blood components across Uttarakhand. We strictly follow national blood policy standards, maintain compliance with advanced lab technologies, and focus on quality, safety, and service to save lives. Serving areas near Rispana Bridge, Haridwar Road, ISBT, Ballupur Chowk, Doon Hospital, Graphic Era Hospital, and Indresh Hospital.",
 
     vision: [
         "Ensure safe, adequate, and accessible blood for all, anytime and anywhere.",
@@ -33,7 +61,6 @@ const aboutContent = {
         "Promote awareness about regular blood donation and its life-saving importance.",
         "Maintain the highest standards of safety and quality in blood services."
     ],
-
 
     mission: [
         "Support the national and international vision of 'Blood for All'.",
@@ -44,7 +71,6 @@ const aboutContent = {
         "Provide safe, reliable, and quality blood to every patient in need.",
         "Maintain ethical practices, transparency, and quality standards in all services."
     ],
-
 
     objectives: [
         "Ensure blood availability to every patient without delay.",
@@ -153,7 +179,6 @@ const OurTeamSection = () => {
     );
 };
 
-
 // =======================================================================
 // Donation Steps Section
 // =======================================================================
@@ -173,7 +198,6 @@ const Certifications = () => {
 
         { icon: CheckCircle, title: 'Quality Control', description: 'Strict quality and safety checks.' },
     ];
-
 
     return (
         <section className="py-20 bg-red-50/50">
@@ -241,7 +265,6 @@ const RegistrationSection = () => {
         }
 
     ];
-
 
     return (
 
@@ -326,7 +349,6 @@ const FacilitiesSection = () => {
         }
 
     ];
-
 
     return (
 
@@ -421,172 +443,158 @@ const TechnologyAndQualitySection = () => {
 };
 
 // =======================================================================
-// Blood Compatibility Table Section
-// // =======================================================================
-// const BloodCompatibilityTable = () => {
-//     const compatibility = [
-//         { group: 'A+', giveTo: 'A+, AB+', receiveFrom: 'A+, A-, O+, O-' },
-//         { group: 'O+', giveTo: 'O+, A+, B+, AB+', receiveFrom: 'O+, O-' },
-//         { group: 'B+', giveTo: 'B+, AB+', receiveFrom: 'B+, B-, O+, O-' },
-//         { group: 'AB+', giveTo: 'AB+', receiveFrom: 'All Groups (Universal Recipient)' },
-//         { group: 'A-', giveTo: 'A+, A-, AB+, AB-', receiveFrom: 'A-, O-' },
-//         { group: 'O-', giveTo: 'All Groups (Universal Donor)', receiveFrom: 'O-' },
-//         { group: 'B-', giveTo: 'B+, B-, AB+, AB-', receiveFrom: 'B-, O-' },
-//         { group: 'AB-', giveTo: 'AB+, AB-', receiveFrom: 'AB-, A-, B-, O-' },
-//     ];
-
-//     return (
-//         <section className="py-20 bg-gray-50">
-//             <div className="max-w-7xl mx-auto px-4">
-//                 <SectionHeader 
-//                     title="Understanding Compatibility"
-//                     subtitle="Blood Group Chart"
-//                 />
-//                 <div className="max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden border border-red-200">
-//                     <table className="min-w-full divide-y divide-red-200">
-//                         <thead className="bg-red-600">
-//                             <tr>
-//                                 <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">Blood Group</th>
-//                                 <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">Can Donate To</th>
-//                                 <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">Can Receive From</th>
-//                             </tr>
-//                         </thead>
-//                         <tbody className="divide-y divide-red-100">
-//                             {compatibility.map((item, index) => (
-//                                 <tr key={item.group} className={index % 2 === 0 ? 'bg-white' : 'bg-red-50 hover:bg-red-100 transition'}>
-//                                     <td className="px-6 py-4 whitespace-nowrap text-lg font-extrabold text-red-700">{item.group}</td>
-//                                     <td className="px-6 py-4 text-sm text-gray-700">{item.giveTo}</td>
-//                                     <td className="px-6 py-4 text-sm text-gray-700">{item.receiveFrom}</td>
-//                                 </tr>
-//                             ))}
-//                         </tbody>
-//                     </table>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-
-// =======================================================================
 // Main View Component
 // =======================================================================
 const AboutPage = () => {
     return (
-        <div className="min-h-screen font-sans">
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+            />
+            <div className="min-h-screen bg-gray-100 font-sans mt-16">
 
-            {/* Header / Hero Section (Focus on Red/White) */}
-            <header
-                className="py-24 text-white shadow-2xl"
-                style={{
-                    // Deep red background with a subtle linear gradient for elegance
-                    background: 'linear-gradient(135deg, #a0364d 0%, #d46884 100%)',
-                }}
-            >
-                <div className="max-w-7xl mx-auto px-4">
-                    <h1 className="text-4xl md:text-7xl font-extrabold mb-4 tracking-tight">
-                        {aboutContent.title}
-                    </h1>
-                    <p className="text-xl font-light max-w-5xl opacity-90">
-                        {aboutContent.description}
-                    </p>
+                {/* Header / Hero Section (Focus on Red/White) */}
+                <header
+                    className="py-24 text-white shadow-2xl"
+                    style={{
+                        // Deep red background with a subtle linear gradient for elegance
+                        background: 'linear-gradient(135deg, #a0364d 0%, #d46884 100%)',
+                    }}
+                >
+                    <div className="max-w-7xl mx-auto px-4">
+                        <h1 className="text-4xl md:text-7xl font-extrabold mb-4 tracking-tight">
+                            {aboutContent.title}
+                        </h1>
+                        <p className="text-xl font-light max-w-5xl opacity-90">
+                            {aboutContent.description}
+                        </p>
 
-                    <button
-                        onClick={() => console.log('Simulating navigation to services.')}
-                        className="mt-8 flex items-center px-8 py-3 text-lg font-semibold text-red-800 bg-white rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-[1.05]"
-                    >
-                        <HeartHandshake className="w-5 h-5 mr-3" />
-                        Explore Our Commitment
-                    </button>
-                </div>
-            </header>
-
-            {/* Vision & Mission Section */}
-            {/* Vision & Mission Section */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                    {/* Vision Card */}
-                    <div className="p-8 rounded-xl shadow-xl border-l-8 border-red-600 bg-red-50">
-                        <Target className="w-10 h-10 text-red-600 mb-4" />
-                        <h3 className="text-2xl font-bold text-gray-800 mb-3">Our Vision</h3>
-
-                        <ul className="space-y-3 text-gray-700">
-                            {aboutContent.vision.map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                    <CheckCircle className="w-5 h-5 mr-3 mt-1 text-green-600 flex-shrink-0" />
-                                    <span className="text-sm">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
+                        <a
+                            href="/services"
+                            className="mt-8 inline-flex items-center px-8 py-3 text-lg font-semibold text-red-800 bg-white rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-[1.05]"
+                        >
+                            <HeartHandshake className="w-5 h-5 mr-3" />
+                            Explore Our Services
+                        </a>
                     </div>
+                </header>
 
+                {/* Vision & Mission Section */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    {/* Mission Card */}
-                    <div className="p-8 rounded-xl shadow-xl border-l-8 border-red-600 bg-red-50">
-                        <Users className="w-10 h-10 text-red-600 mb-4" />
-                        <h3 className="text-2xl font-bold text-gray-800 mb-3">Our Mission</h3>
+                        {/* Vision Card */}
+                        <div className="p-8 rounded-xl shadow-xl border-l-8 border-red-600 bg-red-50">
+                            <Target className="w-10 h-10 text-red-600 mb-4" />
+                            <h3 className="text-2xl font-bold text-gray-800 mb-3">Our Vision</h3>
 
-                        <ul className="space-y-3 text-gray-700">
-                            {aboutContent.mission.map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                    <CheckCircle className="w-5 h-5 mr-3 mt-1 text-green-600 flex-shrink-0" />
-                                    <span className="text-sm">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
+                            <ul className="space-y-3 text-gray-700">
+                                {aboutContent.vision.map((item, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <CheckCircle className="w-5 h-5 mr-3 mt-1 text-green-600 flex-shrink-0" />
+                                        <span className="text-sm">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Mission Card */}
+                        <div className="p-8 rounded-xl shadow-xl border-l-8 border-red-600 bg-red-50">
+                            <Users className="w-10 h-10 text-red-600 mb-4" />
+                            <h3 className="text-2xl font-bold text-gray-800 mb-3">Our Mission</h3>
+
+                            <ul className="space-y-3 text-gray-700">
+                                {aboutContent.mission.map((item, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <CheckCircle className="w-5 h-5 mr-3 mt-1 text-green-600 flex-shrink-0" />
+                                        <span className="text-sm">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Objectives */}
+                        <div className="p-8 rounded-xl shadow-xl bg-white border border-gray-200">
+                            <BookOpen className="w-10 h-10 text-red-600 mb-4" />
+                            <h3 className="text-2xl font-bold text-gray-800 mb-3">Key Objectives</h3>
+
+                            <ul className="space-y-3 text-gray-700">
+                                {aboutContent.objectives.map((obj, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <CheckCircle className="w-5 h-5 mr-3 mt-1 text-green-600 flex-shrink-0" />
+                                        <span className="text-sm">{obj}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
                     </div>
+                </section>
 
+                <Certifications />
+                <RegistrationSection />
+                <FacilitiesSection />
 
-                    {/* Objectives */}
-                    <div className="p-8 rounded-xl shadow-xl bg-white border border-gray-200">
-                        <BookOpen className="w-10 h-10 text-red-600 mb-4" />
-                        <h3 className="text-2xl font-bold text-gray-800 mb-3">Key Objectives</h3>
+                <OurImpactSection />
 
-                        <ul className="space-y-3 text-gray-700">
-                            {aboutContent.objectives.map((obj, index) => (
-                                <li key={index} className="flex items-start">
-                                    <CheckCircle className="w-5 h-5 mr-3 mt-1 text-green-600 flex-shrink-0" />
-                                    <span className="text-sm">{obj}</span>
-                                </li>
-                            ))}
-                        </ul>
+                {/* NEW TEAM SECTION ADDED HERE */}
+                <OurTeamSection />
+
+                <TechnologyAndQualitySection />
+
+                {/* Location Section */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-4">
+                        <SectionHeader
+                            title="Serving Dehradun and Uttarakhand"
+                            subtitle="Our Reach"
+                        />
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                                <MapPin className="w-8 h-8 text-[#BC003D] mb-2" />
+                                <h3 className="text-lg font-semibold mb-2">Blood Bank near Rispana Bridge</h3>
+                                <p className="text-gray-600">Convenient access for residents near Rispana Bridge, Dehradun.</p>
+                            </div>
+                            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                                <MapPin className="w-8 h-8 text-[#BC003D] mb-2" />
+                                <h3 className="text-lg font-semibold mb-2">Blood Bank on Haridwar Road</h3>
+                                <p className="text-gray-600">Serving the Haridwar Road area with reliable blood services.</p>
+                            </div>
+                            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                                <MapPin className="w-8 h-8 text-[#BC003D] mb-2" />
+                                <h3 className="text-lg font-semibold mb-2">Blood Bank near ISBT</h3>
+                                <p className="text-gray-600">Located near ISBT for easy reach from transport hubs.</p>
+                            </div>
+                            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                                <MapPin className="w-8 h-8 text-[#BC003D] mb-2" />
+                                <h3 className="text-lg font-semibold mb-2">Blood Bank near Ballupur Chowk</h3>
+                                <p className="text-gray-600">Supporting Ballupur Chowk community with blood bank services.</p>
+                            </div>
+                            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                                <MapPin className="w-8 h-8 text-[#BC003D] mb-2" />
+                                <h3 className="text-lg font-semibold mb-2">Blood Bank near Doon Hospital</h3>
+                                <p className="text-gray-600">Partnering with Doon Hospital for emergency supplies.</p>
+                            </div>
+                            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                                <MapPin className="w-8 h-8 text-[#BC003D] mb-2" />
+                                <h3 className="text-lg font-semibold mb-2">Blood Bank near Graphic Era Hospital</h3>
+                                <p className="text-gray-600">Providing support to Graphic Era Hospital patients.</p>
+                            </div>
+                        </div>
+                        <div className="text-center mt-8">
+                            <a href="/donation-process" className="text-[#BC003D] hover:underline text-lg font-semibold">Learn about our donation process</a>
+                        </div>
                     </div>
+                </section>
 
-                </div>
-            </section>
-
-            <Certifications />
-            <RegistrationSection />
-            <FacilitiesSection />
-
-            <OurImpactSection />
-
-            {/* NEW TEAM SECTION ADDED HERE */}
-            <OurTeamSection />
-
-            <TechnologyAndQualitySection />
-
-            {/* <BloodCompatibilityTable /> */}
-        </div>
+            </div>
+        </>
     );
 };
 
-
-// =======================================================================
-// Main Application Component (Wrapper)
-// =======================================================================
-const App = () => {
-    return (
-        <div className="min-h-screen bg-gray-100 font-sans mt-16">
-            {/* Simple Navigation Header */}
-
-
-            <AboutPage />
-
-
-        </div>
-    );
-};
-
-export default App;
+export default AboutPage;

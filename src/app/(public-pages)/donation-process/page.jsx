@@ -1,6 +1,107 @@
+// === METADATA ===
+const metadata = {
+  title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre",
+  description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, voluntary camps, and donor registration at UK Blood Centre, Uttarakhand.",
+  keywords: [
+    "Donate Blood in Dehradun",
+    "Blood Donation Process",
+    "Voluntary Blood Donation Dehradun",
+    "Blood Donation Benefits",
+    "Voluntary Blood Donation Camp Dehradun",
+    "Blood Donor Registration Dehradun",
+    "Safe Blood Donation Centre Uttarakhand",
+    "Blood Donation Centre Dehradun",
+    "Blood Donation Centre near me"
+  ],
+  canonical: "https://www.ukbloodcentre.com/donation-process",
+  openGraph: {
+    title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre",
+    description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, voluntary camps, and donor registration at UK Blood Centre, Uttarakhand.",
+    url: "https://www.ukbloodcentre.com/donation-process",
+    images: [
+      {
+        url: "/ukbloodcentreLogo.jpg",
+        width: 800,
+        height: 600,
+        alt: "Blood Donation Process Dehradun"
+      }
+    ]
+  },
+  other: {
+    "geo.region": "IN-UT",
+    "geo.placename": "Dehradun, Uttarakhand, India"
+  }
+};
 
-"use client"
+// === STRUCTURED DATA ===
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "UK Blood Centre",
+  "description": "Blood donation centre in Dehradun offering voluntary blood donation camps and safe donation processes.",
+  "url": "https://www.ukbloodcentre.com",
+  "telephone": "+91-XXXXXXXXXX",
+  "email": "info@ukbloodcentre.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dehradun",
+    "addressRegion": "Uttarakhand",
+    "addressCountry": "India"
+  }
+};
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the benefits of donating blood?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blood donation benefits include saving lives, improving heart health, reducing cancer risk, and free health check-ups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to register as a blood donor in Dehradun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Register as a blood donor in Dehradun by visiting UK Blood Centre or joining our voluntary blood donation camps."
+      }
+    }
+  ]
+};
+
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
+
+function Page() {
+  return (
+    <div>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(', ')} />
+        <link rel="canonical" href={metadata.canonical} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:width" content={metadata.openGraph.images[0].width} />
+        <meta property="og:image:height" content={metadata.openGraph.images[0].height} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqData)}
+        </script>
+      </Head>
+      {/* Rest of the page content */}
+    </div>
+  );
+}
 
 // === EMBEDDED DATA START ===
 const donationTypes = [
