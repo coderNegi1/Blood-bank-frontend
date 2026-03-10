@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { MapPin, Thermometer, Truck, Wifi, Armchair, ShieldCheck, HeartHandshake, Target, Users, BookOpen, UserCheck, Droplet, CheckCircle, Clock, Zap, Award, Globe, Microscope, TrendingUp, Handshake, CalendarCheck, Map, CornerRightDown } from 'lucide-react';
 import {
