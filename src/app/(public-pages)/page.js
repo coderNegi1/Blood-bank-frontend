@@ -5,8 +5,8 @@ import MissionSection from "@/app/components/Mission";
 import WelcomePopup from "../components/popup";
 
 export const metadata = {
-  title: "Best Blood Bank in Dehradun | 24x7 Emergency Blood Centre Uttarakhand",
-  description: "Leading blood bank in Dehradun, Uttarakhand offering PRBC, Platelets, FFP, and 24x7 emergency services. Donate blood, save lives near Rispana Bridge, Haridwar Road.",
+  title: "Blood Bank in Dehradun | Uttarakhand Blood Centre ",
+  description: "Uttarakhand Blood Centre in Dehradun provides PRBC, Platelets, FFP, and emergency blood services 24x7. Donate blood and save lives near Rispana Bridge, Haridwar Road, serving hospitals across Dehradun.",
   keywords: [
     "Best blood bank in Dehradun",
     "24x7 Blood Bank in Dehradun",
@@ -27,10 +27,10 @@ export const metadata = {
     url: "https://www.ukbloodcentre.com",
     images: [
       {
-        url: "/ukbloodcentreLogo.jpg",
+        url: "https://www.ukbloodcentre.com/uttarakhand-blood-centre-logo.jpg",
         width: 800,
         height: 600,
-        alt: "UK Blood Centre Dehradun"
+        alt: "Uttarakhand Blood Centre Dehradun"
       }
     ]
   },
@@ -174,7 +174,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-16 px-4 md:px-8 lg:px-16">
+        {/* <section className="mt-16 px-4 md:px-8 lg:px-16">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-[#BC003D] mb-8">Our Locations Near You in Dehradun</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -209,7 +209,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );

@@ -16,6 +16,7 @@ const Navbar = () => {
 
       ]
     },
+     { name: "Services", path: "/services" },
     { name: "Processing Charges", path: "/processing-charges" },
 
     // { name: "certifications", path: "/certifications" },
@@ -29,8 +30,8 @@ const Navbar = () => {
     //     { name: "Gallery", path: "/gallery" },
     //   ]
     // },
-    { name: "Blood Availability", path: "/available-soon" },
-    { name: "Services", path: "/services" },
+    // { name: "Blood Availability", path: "/available-soon" },
+   
     { name: "Donation Process", path: "/donation-process" },
     { name: "Contact", path: "/contact" },
   ];
@@ -67,7 +68,7 @@ const Navbar = () => {
       <div>
         <Link href="/" className="flex items-center gap-2">
           <img
-            src="/ukbloodcentreLogo.jpg"
+            src="/uttarakhand-blood-centre-logo.jpg"
             alt="Uttarakhand Blood Centre"
             className={`h-20 w-auto transition-all rounded-full duration-300
           ${scrolled ? "opacity-80" : ""}`}

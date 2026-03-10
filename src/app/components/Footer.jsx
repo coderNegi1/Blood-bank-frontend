@@ -28,7 +28,7 @@ export default function App() {
              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center p-1 overflow-hidden">
                 {/* Fallback for the logo provided in the request */}
                 <img 
-                  src="/ukbloodcentreLogo.jpg" 
+                  src="/uttarakhand-blood-centre-logo.jpg" 
                   alt="UBC Logo" 
                   className="object-contain"
                   onError={(e) => { e.target.src = "https://placehold.co/100x100/e11d48/white?text=UBC"; }}
@@ -102,9 +102,9 @@ export default function App() {
             <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
               <span className="text-rose-500 mb-2 opacity-50 group-hover:opacity-100 transition-opacity"><MapPinIcon /></span>
               <p className="text-xs font-medium mb-2">Location Coordinates</p>
-              <code className="text-[10px] bg-slate-900 px-2 py-1 rounded text-rose-400">30.296681, 78.054880</code>
+              <code className="text-[10px] bg-slate-900 px-2 py-1 rounded text-rose-400"></code>
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=30.296681,78.054880" 
+                href="https://www.google.com/maps/place/?q=place_id:0x390929479e407e3b:0x75634bce639f3592"
                 target="_blank" 
                 rel="noreferrer"
                 className="mt-3 text-xs bg-rose-600 text-white px-3 py-1.5 rounded hover:bg-rose-700 transition-all"
