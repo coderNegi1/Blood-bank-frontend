@@ -14,7 +14,7 @@ export default function LayoutWrapper({ children }) {
     <>
       {!isAdmin && <EMGnav />}
       {!isAdmin && <Navbar />}
-      <main className="min-h-screen mt-8 md:mt-20">{children}</main>
+      <main className="min-h-screen mt-40 md:mt-32">{children}</main>
       {!isAdmin && <Footer />}
     </>
   );

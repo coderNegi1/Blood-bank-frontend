@@ -24,11 +24,11 @@ const BloodBankCharges = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-12 font-sans">
+    <div className="min-h-screen bg-gray-50  p-4 md:p-12 font-sans">
       <div className="max-w-5xl mx-auto">
         
         {/* Header Section */}
-        <div className="mb-12 text-center">
+        <div className=" text-center">
           <h1 className="text-3xl md:text-5xl font-black text-gray-900 uppercase tracking-tight">
             Blood <span className="text-red-600">Processing</span> Charges
           </h1>

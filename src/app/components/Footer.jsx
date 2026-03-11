@@ -56,6 +56,19 @@ export default function App() {
                 </svg>
               </a>
             </div>
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/share/1DN4Mcn4dQ/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-rose-600 transition-colors text-white"
+              >
+                <span className="sr-only">Facebook</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.2V12h2.2V9.8c0-2.18 1.3-3.4 3.3-3.4.96 0 1.96.17 1.96.17v2.15h-1.1c-1.08 0-1.42.67-1.42 1.36V12h2.42l-.39 2.88h-2.03v6.99A10 10 0 0 0 22 12z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 

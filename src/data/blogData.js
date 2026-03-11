@@ -79,7 +79,7 @@ export const contentData = {
       <p>We are currently facing a shortage of <strong>O-Negative blood</strong> across Dehradun, Rishikesh, and nearby regions. We urge healthy donors to come forward immediately.</p>
       <ul>
         <li>Location: Dehradun Blood Bank</li>
-        <li>Contact: +91 9876543210</li>
+        <li>Contact: +91 98765 43210</li>
         <li>Timing: 9:00 AM - 5:00 PM daily</li>
       </ul>
       <p>Please share this message to save lives.</p>

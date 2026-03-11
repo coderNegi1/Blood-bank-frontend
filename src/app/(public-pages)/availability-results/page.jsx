@@ -10,7 +10,7 @@ const DUMMY_SEARCH_DATA = {
   district: 'Mumbai',
 };
 
-// Dummy Results (यह डेटा डेटाबेस से आएगा)
+// Dummy Results 
 const DUMMY_RESULTS = [
   { id: 1, type: 'Blood Bank', name: 'City Central Blood Bank', units: 5, distance: '2.5 km', contact: '123-456-7890', isVerified: true },
   { id: 2, type: 'Organization', name: 'Life Savers NGO', units: 10, distance: '5.8 km', contact: '987-654-3210', isVerified: true },

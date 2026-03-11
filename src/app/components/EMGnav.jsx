@@ -11,18 +11,18 @@ const TopBar = () => {
                 {/* Left Side - Contact Info (Centered on mobile) */}
                 <div className="flex md:gap-3 items-center justify-center md:justify-start">
                     <a
-                        href="tel:+919876543210"
+                        href="tel:+91-9084311316"
                         className="flex items-center space-x-2 hover:text-red-100 transition-colors font-medium"
                     >
                         <Phone className="w-4 h-4 " />
-                        <span>+91 98765 43210</span>
+                        <span>+91 +91-9084311316</span>
                     </a>
                     <a
-                        href="tel:+91 74569 09619"
+                        href="tel:+91-7456909619"
                         className="flex items-center space-x-2 ps-1 hover:text-red-100 transition-colors font-medium"
                     >
                         <Phone className="w-4 h-4 " />
-                        <span>+91 74569 09619</span>
+                        <span>+91-7456909619</span>
                     </a>
 
                 </div>
