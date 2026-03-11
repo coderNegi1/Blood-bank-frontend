@@ -132,12 +132,12 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { id: "prbc", title: "PRBC Blood", img: "/prbc.png", desc: "Packed Red Blood Cells for oxygen transport, available at our blood bank in Dehradun." },
-                { id: "sdp", title: "SDP Platelets", img: "/SDP.png", desc: "Single Donor Platelets (SDP) for critical patients with low platelet counts in Uttarakhand." },
-                { id: "rdp", title: "Random Platelets", img: "/RDP.png", desc: "Random Donor Platelets (RDP) essential for maintaining platelet counts in various conditions." },
-                { id: "ffp", title: "Fresh Frozen Plasma", img: "/ffp.png", desc: "FFP for clotting factors and volume expansion in emergencies near Indresh Hospital." },
-                { id: "cryo", title: "Cryoprecipitate", img: "/Cryoprecipitate.png", desc: "Concentrated clotting factors for treating hemophilia and coagulation deficiencies." },
-                { id: "whb", title: "Whole Human Blood", img: "/wbc.png", desc: "Freshly collected whole blood containing all essential components for massive blood loss." }
+                { id: "prbc", title: "PRBC Blood", img: "/prbc.webp", desc: "Packed Red Blood Cells for oxygen transport, available at our blood bank in Dehradun." },
+                { id: "sdp", title: "SDP Platelets", img: "/SDP.webp", desc: "Single Donor Platelets (SDP) for critical patients with low platelet counts in Uttarakhand." },
+                { id: "rdp", title: "Random Platelets", img: "/RDP.webp", desc: "Random Donor Platelets (RDP) essential for maintaining platelet counts in various conditions." },
+                { id: "ffp", title: "Fresh Frozen Plasma", img: "/ffp.webp", desc: "FFP for clotting factors and volume expansion in emergencies near Indresh Hospital." },
+                { id: "cryo", title: "Cryoprecipitate", img: "/Cryoprecipitate.webp", desc: "Concentrated clotting factors for treating hemophilia and coagulation deficiencies." },
+                { id: "whb", title: "Whole Human Blood", img: "/wbc.webp", desc: "Freshly collected whole blood containing all essential components for massive blood loss." }
               ].map((item) => (
                 <div key={item.id} className="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-all group">
                   {/* Service Image Section */}
