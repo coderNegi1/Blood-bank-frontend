@@ -123,20 +123,18 @@ const HeroCarousel = () => {
 
 
       {/* Modern Dashed Indicators */}
-      <div className="absolute bottom-14 left-12 flex items-end gap-3 z-30">
+      <div className="absolute bottom-14 md:left-22 left-16 flex items-end gap-3 z-30 ">
         {slidesData.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
             className="group flex flex-col items-center gap-2"
           >
-            <span className={`text-xs font-bold transition-all ${index === currentIndex ? 'text-red-600 opacity-100' : 'opacity-0'}`}>
-              0{index + 1}
-            </span>
+         
             <div
               className={`h-1.5 rounded-full transition-all duration-500 ${index === currentIndex
-                  ? 'w-16 bg-red-600'
-                  : 'w-8 bg-gray-300 hover:bg-gray-400'
+                ? 'w-16 bg-red-600'
+                : 'w-8 bg-gray-300 hover:bg-gray-400'
                 }`}
             />
           </button>

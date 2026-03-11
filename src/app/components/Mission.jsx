@@ -17,37 +17,37 @@ export default function MissionSection() {
       title: "Compassion",
       description:
         "We treat every individual—donor or patient—with empathy, dignity, and respect. Each drop collected reflects our commitment to humanity.",
-      image: "/images/values/compassion.jpg",
+      image: "/compassion-blood-donation.webp",
     },
     {
       title: "Safety & Quality",
       description:
         "We follow world-class safety and quality protocols — from donor screening to laboratory testing and final delivery.",
-      image: "/images/values/safety.jpg",
+      image: "/blood-safety-quality-testing.webp",
     },
     {
       title: "Community Engagement",
       description:
         "We engage communities through education, donation drives, and awareness programs to inspire regular voluntary blood donation.",
-      image: "/images/values/community.jpg",
+      image: "/community-blood-donation-camp.webp",
     },
     {
       title: "Preparedness",
       description:
         "With real-time inventory systems and 24/7 readiness, we ensure reliable blood supply even in emergencies and disasters.",
-      image: "/images/values/preparedness.jpg",
+      image: "/emergency-blood-supply-preparedness.webp",
     },
     {
       title: "Innovation & Technology",
       description:
         "We leverage digital tools and smart logistics to enhance donor experience, efficiency, and transparency.",
-      image: "/images/values/innovation.jpg",
+      image: "/blood-bank-technology-system.webp",
     },
     {
       title: "Integrity & Transparency",
       description:
         "We operate with full honesty, accountability, and ethical conduct — ensuring trust at every level.",
-      image: "/images/values/integrity.jpg",
+      image: "/ethical-blood-bank-transparency.webp",
     },
   ];
 

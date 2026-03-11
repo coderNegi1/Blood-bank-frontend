@@ -13,7 +13,7 @@ export const metadata = {
   title: "Uttarakhand Blood Centre",
   description: "Donate blood, save lives — Official Blood Donation Platform.",
   icons: {
-    icon: "/ukbloodcentreLogo.jpg", // image path — public folder ke andar
+    icon: "/uttarakhand-blood-centre-logo.jpg", // image path — public folder ke andar
   },
 };
 

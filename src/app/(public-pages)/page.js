@@ -1,8 +1,10 @@
 import HeroSection from "@/app/components/Hero";
-import Collaborators from "@/app/components/Collaborators";
 import BloodWorkflowPage from "@/app/components/BloodWorkflow";
 import MissionSection from "@/app/components/Mission";
-import WelcomePopup from "../components/popup";
+// import WelcomePopup from "../components/popup";
+import FaQAccordian from "../components/FaQAccordion";
+import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Blood Bank in Dehradun | Uttarakhand Blood Centre ",
@@ -107,7 +109,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
       />
       <main className="bg-gray-50 text-gray-900">
-        <WelcomePopup />
+
         <section id="hero" className="mt-16">
           <HeroSection />
         </section>
@@ -120,59 +122,71 @@ export default function HomePage() {
           <BloodWorkflowPage />
         </section>
 
-        <section id="collaborators" className="mt-16">
-          <Collaborators />
-        </section>
 
         {/* New SEO Optimized Sections */}
-        <section className="mt-16 px-4 md:px-8 lg:px-16">
+        <section className=" px-4 md:px-8 6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-[#BC003D] mb-8">Blood Components We Provide in Dehradun</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">PRBC Blood</h3>
-                <p className="text-gray-600">Packed Red Blood Cells for oxygen transport, available at our blood bank in Dehradun.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Platelets Availability</h3>
-                <p className="text-gray-600">Random Donor Platelets and SDP Platelets for patients with low platelet counts.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Fresh Frozen Plasma</h3>
-                <p className="text-gray-600">FFP for clotting factors and volume expansion in emergencies.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Pediatric Red Cells</h3>
-                <p className="text-gray-600">Specialized red cells for pediatric patients in Uttarakhand hospitals.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Plasmapheresis</h3>
-                <p className="text-gray-600">Advanced plasma collection and PRP Preparation Centre near Haridwar Road.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Blood Components Centre</h3>
-                <p className="text-gray-600">Our Advanced Blood Component Lab ensures safe, quality components.</p>
-              </div>
+            <h2 className="text-3xl py-2 font-bold text-center text-[#BC003D] mb-12">
+              Blood Components We Provide in Dehradun
+            </h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { id: "prbc", title: "PRBC Blood", img: "/prbc.png", desc: "Packed Red Blood Cells for oxygen transport, available at our blood bank in Dehradun." },
+                { id: "sdp", title: "SDP Platelets", img: "/SDP.png", desc: "Single Donor Platelets (SDP) for critical patients with low platelet counts in Uttarakhand." },
+                { id: "rdp", title: "Random Platelets", img: "/RDP.png", desc: "Random Donor Platelets (RDP) essential for maintaining platelet counts in various conditions." },
+                { id: "ffp", title: "Fresh Frozen Plasma", img: "/ffp.png", desc: "FFP for clotting factors and volume expansion in emergencies near Indresh Hospital." },
+                { id: "cryo", title: "Cryoprecipitate", img: "/Cryoprecipitate.png", desc: "Concentrated clotting factors for treating hemophilia and coagulation deficiencies." },
+                { id: "whb", title: "Whole Human Blood", img: "/wbc.png", desc: "Freshly collected whole blood containing all essential components for massive blood loss." }
+              ].map((item) => (
+                <div key={item.id} className="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-all group">
+                  {/* Service Image Section */}
+                  <Link href={`/services/${item.id}`} className="block relative h-40 overflow-hidden">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                  </Link>
+
+                  {/* Text Content */}
+                  <div className="p-6">
+                    <Link href={`/services/${item.id}`}>
+                      <h3 className="text-xl font-bold mb-3 text-slate-800 hover:text-[#BC003D] transition-colors cursor-pointer">
+                        {item.title}
+                      </h3>
+                    </Link>
+                    <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                      {item.desc}
+                    </p>
+
+                    {/* Link with Arrow */}
+                    <Link
+                      href={`/services/${item.id}`}
+                      className="inline-flex items-center gap-2 text-sm font-bold text-[#BC003D] hover:gap-3 transition-all"
+                    >
+                      Learn More <ArrowRight size={16} />
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="mt-16 bg-[#BC003D] text-white py-12 px-4 md:px-8 lg:px-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">24x7 Emergency Blood Bank in Dehradun</h2>
-            <p className="text-lg mb-6">
-              As the best blood bank in Dehradun, we operate round-the-clock to ensure blood availability for emergencies. Whether near Rispana Bridge or ISBT, our services are always ready to save lives in Uttarakhand.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/donation-process" className="bg-white text-[#BC003D] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Donate Blood in Dehradun
-              </a>
-              <a href="/contact" className="bg-white text-[#BC003D] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Contact Blood Bank
-              </a>
-            </div>
-          </div>
+
+        <section id="FaQAccordian" className="mt-16">
+          <FaQAccordian />
         </section>
+
+
+        {/* <section id="collaborators" className="mt-16">
+          <Collaborators />
+        </section> */}
+
+
+
 
         {/* <section className="mt-16 px-4 md:px-8 lg:px-16">
           <div className="max-w-6xl mx-auto">

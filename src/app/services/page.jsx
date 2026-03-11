@@ -16,6 +16,25 @@ import {
   Stethoscope
 } from 'lucide-react';
 
+
+export const metadata = {
+  title: "Blood Components Services in Dehradun | PRBC, SDP, FFP | Uttarakhand Blood Centre",
+  description:
+    "Uttarakhand Blood Centre Dehradun provides 24/7 blood components including Whole Blood (WHB), Packed Red Blood Cells (PRBC), Single Donor Platelets (SDP), Random Donor Platelets (RDP), Fresh Frozen Plasma (FFP) and Cryoprecipitate with advanced safety screening.",
+  keywords: [
+    "Blood Components Dehradun",
+    "PRBC Blood Dehradun",
+    "SDP Platelets Dehradun",
+    "Random Donor Platelets Dehradun",
+    "Fresh Frozen Plasma Dehradun",
+    "Cryoprecipitate Blood Dehradun",
+    "Whole Blood Services Dehradun",
+    "Emergency Blood Bank Dehradun",
+    "Plateletpheresis Dehradun",
+    "Best Blood Bank in Dehradun"
+  ],
+};
+
 const App = () => {
   // Service categories based on user request
   const services = [
@@ -24,35 +43,35 @@ const App = () => {
       title: "Whole Human Blood",
       shortTitle: "WHB",
       desc: "Freshly collected whole blood containing all components. Vital for massive blood loss and exchange transfusions.",
-      image: "./wbc.png",
+      image: "./wbc.webp",
     },
     {
       id: "prbc",
       title: "PRBC Blood Services",
       shortTitle: "PRBC",
       desc: "Packed Red Blood Cells processed with high-end technology for maximum efficacy. Available 24x7 for surgeries and trauma cases.",
-      image: "../prbc.png",
+      image: "../prbc.webp",
     },
     {
       id: "sdp",
       title: "Plateletpheresis (SDP) – 24×7",
       shortTitle: "SDP - 24X7",
       desc: "Available around the clock, Single Donor Platelet (SDP) collection helps patients fighting cancer, dengue, or undergoing major surgeries.",
-      image: "../SDP.png",
+      image: "../SDP.webp",
     },
     {
       id: "rdp",
       title: "Random Donor Platelets",
       shortTitle: "RDP",
       desc: "Platelets separated from individual whole blood units. Essential for maintaining platelet counts in various medical conditions.",
-      image: "../RDP.png",
+      image: "../RDP.webp",
     },
     {
       id: "ffp",
       title: "Fresh Frozen Plasma",
       shortTitle: "FFP",
       desc: "Rapidly frozen plasma to preserve clotting factors. Essential for liver diseases and severe bleeding management.",
-      image: "../ffp.png",
+      image: "../ffp.webp",
     },
     // {
     //   id: "plasmapheresis",
@@ -66,7 +85,7 @@ const App = () => {
       title: "Cryoprecipitate",
       shortTitle: "CRYO",
       desc: "Concentrated clotting factors derived from plasma. Crucial for treating hemophilia and specific coagulation deficiencies.",
-      image: "../Cryoprecipitate.png",
+      image: "../Cryoprecipitate.webp",
     }
   ];
 
@@ -86,7 +105,7 @@ const App = () => {
               Certified & Trusted Blood Centre
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-              Professional Blood Centre <br /> Services in Dehradun
+              Blood Components Services in Dehradun – PRBC, SDP, Platelets & Plasma
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
               UK Blood Centre is Uttarakhand's leading facility for life-saving blood components.
@@ -97,68 +116,64 @@ const App = () => {
       </header>
 
       {/* Main Services Grid with the Screenshot Design */}
-        <main className="   max-w-7xl mx-auto px-6 py-20 ">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 uppercase tracking-tight">Our Blood Components</h2>
-            <div className="w-20 h-1.5 bg-[#BC003D] mx-auto"></div>
-          </div>
+      <main className="   max-w-7xl mx-auto px-6 py-20 ">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 uppercase tracking-tight">Our Blood Components</h2>
+          <div className="w-20 h-1.5 bg-[#BC003D] mx-auto"></div>
+        </div>
 
-          <div className=" relative grid md:grid-cols-2 lg:grid-cols-3 gap-10 group:">
-            {services.map((service) => (
-              <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-500">
-                {/* Image Section with Overlay (Matching Screenshot) */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover grayscale-[0.2]"
-                  />
-                  {/* Red Overlay */}
-                  <div className="absolute inset-0 bg-red-600/60 mix-blend-multiply group-hover:bg-transparent transition-all duration-300"></div>
+        <div className=" relative grid md:grid-cols-2 lg:grid-cols-3 gap-10 group:">
+          {services.map((service) => (
+            <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-500">
 
-                  {/* Vertical Text (PLATELETPHERESIS style) */}
-                  <div className="absolute left-4 bottom-4 top-4 flex items-end">
-                    <span className="text-white text-2xl font-bold uppercase tracking-[0.2em] transform -rotate-180 [writing-mode:vertical-lr] opacity-90 drop-shadow-md">
-                      {service.shortTitle.split(' ')[0]}
-                    </span>
-                  </div>
+              {/* 1. Image Section - SEO Optimized Alt Tags */}
+              <Link href={`/services/${service.id}`} className="relative h-64 overflow-hidden block">
+                <img
+                  src={service.image}
+                  // Updated Alt Tag for SEO & Geotagging
+                  alt={`${service.title} in Dehradun - Uttarakhand Blood Centre ${service.shortTitle} Services`}
+                  className="w-full h-full object-cover grayscale-[0.2] group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Red Overlay */}
+                <div className="absolute inset-0 bg-red-600/60 mix-blend-multiply group-hover:bg-transparent transition-all duration-300"></div>
 
-                  {/* Subtitle Overlay (SDP - 24X7 style) */}
-                  {/* <div className="absolute top-6 left-24">
-                    <span className="text-white text-3xl font-bold drop-shadow-lg">
-                      ({service.shortTitle})
-                    </span>
-                </div> */}
+                {/* Vertical Text */}
+                <div className="absolute left-4 bottom-4 top-4 flex items-end">
+                  <span className="text-white text-2xl font-bold uppercase tracking-[0.2em] transform -rotate-180 [writing-mode:vertical-lr] opacity-90 drop-shadow-md">
+                    {service.shortTitle.split(' ')[0]}
+                  </span>
                 </div>
+              </Link>
+              {/* Content Section */}
+              <div className="p-8 flex flex-col flex-grow">
 
-                {/* Content Section */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-[#1e1b4b] mb-4 leading-tight">
+                {/* 2. Heading - Now Clickable */}
+                <Link href={`/services/${service.id}`}>
+                  <h3 className="text-2xl font-bold text-[#1e1b4b] mb-4 leading-tight hover:text-[#BC003D] transition-colors cursor-pointer">
                     {service.title}
                   </h3>
-                  <p className="text-slate-500 text-lg leading-relaxed mb-8 flex-grow">
-                    {service.desc}
-                  </p>
+                </Link>
 
-                  {/* Footer Action (Matching Screenshot Button) */}
-                  <Link href={`/services/${service.id}`}>
-                    <div className="flex items-center gap-4 cursor-pointer">
+                <p className="text-slate-500 text-lg leading-relaxed mb-8 flex-grow">
+                  {service.desc}
+                </p>
 
-                      <div className="w-12 h-12 rounded-full bg-slate-400 flex items-center justify-center text-white group-hover:bg-[#BC003D] transition-colors">
-                        <ArrowRight className="w-6 h-6" />
-                      </div>
-
-                      <span className="text-slate-500 font-bold underline underline-offset-4 decoration-slate-300 hover:text-[#BC003D] hover:decoration-[#BC003D] transition-all">
-                        Read More
-                      </span>
-
+                {/* 3. Footer Action (Read More) */}
+                <Link href={`/services/${service.id}`}>
+                  <div className="flex items-center gap-4 cursor-pointer group/btn">
+                    <div className="w-12 h-12 rounded-full bg-slate-400 flex items-center justify-center text-white group-hover/btn:bg-[#BC003D] transition-colors">
+                      <ArrowRight className="w-6 h-6" />
                     </div>
-                  </Link>
-                </div>
+                    <span className="text-slate-500 font-bold underline underline-offset-4 decoration-slate-300 group-hover/btn:text-[#BC003D] group-hover/btn:decoration-[#BC003D] transition-all">
+                      Read More
+                    </span>
+                  </div>
+                </Link>
               </div>
-            ))}
-          </div>
-        </main>
+            </div>
+          ))}
+        </div>
+      </main>
 
       {/* Info Bar */}
       <section className="bg-white py-12 border-t border-slate-100">
@@ -186,7 +201,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Contact Dehradun Centre</h2>
+              <h2 className="text-3xl font-bold mb-6">Contact   Uttarakhand Blood Centre</h2>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Phone className="w-6 h-6 text-red-500" />
@@ -202,8 +217,8 @@ const App = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white/5 p-8 rounded-3xl backdrop-blur-sm border border-white/10">
-              <p className="text-lg text-white/80 italic">
+            <div className="bg-white/5 p-8 rounded-3xl backdrop-blur-sm border border-white/10 w-full">
+              <p className="text-[14px] text-white/80 italic">
                 "We ensure timely availability of high-quality blood components to save lives when it's most critical."
               </p>
             </div>

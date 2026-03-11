@@ -3,13 +3,13 @@ import DeveloperSection from './DeveloperSection';
 
 // Mocking Lucide icons since we are in a single-file environment
 const MapPinIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
 );
 const PhoneIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
 );
 const MailIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
 );
 
 const API_CONFIG = {
@@ -21,34 +21,41 @@ export default function App() {
     <footer className="w-full bg-slate-900 text-slate-300 font-sans">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        
+
         {/* Column 1: Identity & Motto */}
         <div className="space-y-6">
           <div className="flex items-center gap-3">
-             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center p-1 overflow-hidden">
-                {/* Fallback for the logo provided in the request */}
-                <img 
-                  src="/uttarakhand-blood-centre-logo.jpg" 
-                  alt="UBC Logo" 
-                  className="object-contain"
-                  onError={(e) => { e.target.src = "https://placehold.co/100x100/e11d48/white?text=UBC"; }}
-                />
-             </div>
-             <div>
-               <h3 className="text-white font-bold text-lg leading-tight">Uttarakhand<br/>Blood Centre</h3>
-             </div>
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center p-1 overflow-hidden">
+              {/* Fallback for the logo provided in the request */}
+              <img
+                src="/uttarakhand-blood-centre-logo.jpg"
+                alt="UBC Logo"
+                className="object-contain"
+                onError={(e) => { e.target.src = "https://placehold.co/100x100/e11d48/white?text=UBC"; }}
+              />
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-lg leading-tight">Uttarakhand<br />Blood Centre</h3>
+            </div>
           </div>
           <p className="text-sm leading-relaxed text-slate-400">
-           A unit of Parvatiya Manav Utthan Samiti.
+            A unit of Parvatiya Manav Utthan Samiti.
           </p>
           <div className="flex gap-4">
             {/* Social Media placeholders */}
-            {['facebook', 'twitter', 'instagram'].map((social) => (
-              <a key={social} href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-rose-600 transition-colors text-white">
-                <span className="sr-only">{social}</span>
-                <div className="w-4 h-4 bg-current opacity-50 rounded-sm" />
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/share/1DN4Mcn4dQ/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-rose-600 transition-colors text-white"
+              >
+                <span className="sr-only">Facebook</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.2V12h2.2V9.8c0-2.18 1.3-3.4 3.3-3.4.96 0 1.96.17 1.96.17v2.15h-1.1c-1.08 0-1.42.67-1.42 1.36V12h2.42l-.39 2.88h-2.03v6.99A10 10 0 0 0 22 12z" />
+                </svg>
               </a>
-            ))}
+            </div>
           </div>
         </div>
 
@@ -74,8 +81,8 @@ export default function App() {
               <li className="flex items-start gap-3">
                 <span className="text-rose-500 mt-1"><MapPinIcon /></span>
                 <span>
-                  First Floor, 100, Haridwar Road, 
-                  Near Rispana Bridge, Dehradun, <br/>
+                  First Floor, 100, Haridwar Road,
+                  Near Rispana Bridge, Dehradun, <br />
                   Uttarakhand, India - 248001
                 </span>
               </li>
@@ -99,21 +106,32 @@ export default function App() {
 
           {/* Map Preview Area */}
           <div className="w-full h-48 rounded-lg bg-slate-800 overflow-hidden border border-slate-700 group relative">
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-              <span className="text-rose-500 mb-2 opacity-50 group-hover:opacity-100 transition-opacity"><MapPinIcon /></span>
-              <p className="text-xs font-medium mb-2">Location Coordinates</p>
-              <code className="text-[10px] bg-slate-900 px-2 py-1 rounded text-rose-400"></code>
-              <a 
-                href="https://www.google.com/maps/place/?q=place_id:0x390929479e407e3b:0x75634bce639f3592"
-                target="_blank" 
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center z-10">
+              <span className="text-rose-500 mb-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                <MapPinIcon size={20} />
+              </span>
+              <p className="text-xs font-medium mb-1 text-slate-300">Location Coordinates</p>
+
+              {/* Exact Coordinates for UK Blood Centre, Dehradun */}
+              <code className="text-[10px] bg-slate-900 px-2 py-1 rounded text-rose-400 font-mono">
+                30.2968° N, 78.0549° E
+              </code>
+
+              <a
+                href="https://maps.google.com/?q=Uttarakhand+Blood+Centre+Dehradun"
+                target="_blank"
                 rel="noreferrer"
-                className="mt-3 text-xs bg-rose-600 text-white px-3 py-1.5 rounded hover:bg-rose-700 transition-all"
+                className="mt-3 text-xs bg-rose-600 text-white px-4 py-1.5 rounded hover:bg-rose-700 transition-all font-bold shadow-md"
               >
                 Open in Maps
               </a>
             </div>
-            {/* Visual background pattern representing a map */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+
+            {/* Visual background pattern (Map Grid Effect) */}
+            <div
+              className="absolute inset-0 opacity-10 pointer-events-none"
+              style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}
+            ></div>
           </div>
         </div>
       </div>
