@@ -44,7 +44,16 @@ const ContactUs = () => {
                 <MapPin size={24} />
               </div>
               <div className="space-y-1">
-                <h3 className="font-bold text-slate-900 text-lg tracking-tight">Visit Our Facility</h3>
+                <h3 className="font-bold text-slate-900 text-lg tracking-tight">
+                  <a
+                    href="https://share.google/83Luvcg9Op5PxqPlh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-600 underline"
+                  >
+                    Visit Our Facility
+                  </a>
+                </h3>
                 <p className="text-slate-600 leading-relaxed font-medium">
                   First Floor, Uttarakhand Blood Centre,<br />
                   100, Haridwar Road, Near Rispana Bridge,<br />
