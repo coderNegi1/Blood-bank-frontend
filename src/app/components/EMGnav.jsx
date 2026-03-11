@@ -15,7 +15,7 @@ const TopBar = () => {
                         className="flex items-center space-x-2 hover:text-red-100 transition-colors font-medium"
                     >
                         <Phone className="w-4 h-4 " />
-                        <span>+91 +91-9084311316</span>
+                        <span>+91-9084311316</span>
                     </a>
                     <a
                         href="tel:+91-7456909619"
