@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Blood Bank in Dehradun | Uttarakhand Blood Centre ",
-  description: "Uttarakhand Blood Centre in Dehradun provides PRBC, Platelets, FFP, and emergency blood services 24x7. Donate blood and save lives near Rispana Bridge, Haridwar Road, serving hospitals across Dehradun.",
+  title: "Best Blood Bank in Dehradun | 24x7 Emergency Blood Centre Uttarakhand | Blood Bank Near Me",
+  description: "Leading blood bank in Dehradun, Uttarakhand offering PRBC, Platelets, FFP, and 24x7 emergency services. Blood bank near me, blood center Dehradun, Uttarakhand blood centre - blood bank in Dehradun.",
   keywords: [
     "Best blood bank in Dehradun",
     "24x7 Blood Bank in Dehradun",
@@ -20,7 +20,14 @@ export const metadata = {
     "Voluntary Blood Donation Dehradun",
     "Donate Blood in Dehradun",
     "Blood Donor Registration Dehradun",
-    "Safe Blood Donation Centre Uttarakhand"
+    "Safe Blood Donation Centre Uttarakhand",
+    "Blood bank Dehradun",
+    "Blood bank near me",
+    "Blood bank",
+    "Blood center",
+    "Blood bank in near me",
+    "Uttarakhand blood centre – blood bank in Dehradun",
+    "Blood bank in Dehradun"
   ],
   canonical: "https://www.ukbloodcentre.com",
   openGraph: {

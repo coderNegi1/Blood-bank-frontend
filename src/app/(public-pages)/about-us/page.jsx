@@ -10,10 +10,29 @@ import {
 
 
 export const metadata = {
-  title: "Blood Bank in Dehradun | Uttarakhand Blood Centre",
-  description:
-    "Find a trusted blood bank near Rispana Bridge, ISBT, Ballupur Chowk, Doon Hospital and Haridwar Road in Dehradun. Donate blood and save lives.",
+  title: "About UK Blood Centre | Best Blood Bank in Dehradun, Uttarakhand | Blood Bank Near Me",
+  description: "Learn about UK Blood Centre, the leading blood bank in Dehradun, Uttarakhand offering advanced lab services, compliance, and 24x7 emergency support near Rispana Bridge and Haridwar Road. Blood bank Dehradun, blood center.",
   keywords: [
+    "About UK Blood Centre",
+    "Best blood bank in Dehradun",
+    "Blood bank Uttarakhand",
+    "Advanced Blood Component Lab",
+    "Safe Blood Donation Centre Uttarakhand",
+    "Blood Bank near Rispana Bridge Dehradun",
+    "Blood Bank on Haridwar Road Dehradun",
+    "Blood Centre in Dehradun",
+    "Blood bank Dehradun",
+    "Blood bank near me",
+    "Blood bank",
+    "Blood center",
+    "Blood bank in near me",
+    "Uttarakhand blood centre – blood bank in Dehradun",
+    "Blood bank in Dehradun",
+    "blood bank near ballupur chowk",
+    "blood bank near doon hospital",
+    "blood bank near graphic era hospital",
+    "platelet donation dehradun",
+    "blood donation dehradun",
     "blood bank in dehradun",
     "best blood bank in dehradun",
     "24x7 blood bank dehradun",

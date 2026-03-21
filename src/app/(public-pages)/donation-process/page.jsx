@@ -1,8 +1,8 @@
 "use client";
 // === METADATA ===
 const metadata = {
-  title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre",
-  description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, voluntary camps, and donor registration at UK Blood Centre, Uttarakhand.",
+  title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre | Blood Bank Near Me",
+  description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, voluntary camps, and donor registration at UK Blood Centre, Uttarakhand. Blood bank Dehradun, blood center.",
   keywords: [
     "Donate Blood in Dehradun",
     "Blood Donation Process",
@@ -12,7 +12,14 @@ const metadata = {
     "Blood Donor Registration Dehradun",
     "Safe Blood Donation Centre Uttarakhand",
     "Blood Donation Centre Dehradun",
-    "Blood Donation Centre near me"
+    "Blood Donation Centre near me",
+    "Blood bank Dehradun",
+    "Blood bank near me",
+    "Blood bank",
+    "Blood center",
+    "Blood bank in near me",
+    "Uttarakhand blood centre – blood bank in Dehradun",
+    "Blood bank in Dehradun"
   ],
   canonical: "https://www.ukbloodcentre.com/donation-process",
   openGraph: {
@@ -76,6 +83,7 @@ const faqData = {
 
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 function Page() {
   return (
