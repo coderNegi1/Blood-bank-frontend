@@ -66,7 +66,7 @@ export default function App() {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/uttarakhandblood?igsh=eDg2ejJxZmZhc2Zu"
+              href="https://www.instagram.com/uttarakhandbloodcentre?igsh=eDg2ejJxZmZhc2Zu"
               target="_blank"
               rel="noreferrer"
               className="w-9 h-9   flex items-center justify-center hover:scale-110 transition-all shadow "
