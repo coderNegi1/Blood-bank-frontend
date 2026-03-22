@@ -10,55 +10,55 @@ import {
 
 
 export const metadata = {
-  title: "About UK Blood Centre | Best Blood Bank in Dehradun, Uttarakhand | Blood Bank Near Me",
-  description: "Learn about UK Blood Centre, the leading blood bank in Dehradun, Uttarakhand offering advanced lab services, compliance, and 24x7 emergency support near Rispana Bridge and Haridwar Road. Blood bank Dehradun, blood center.",
-  keywords: [
-    "About UK Blood Centre",
-    "Best blood bank in Dehradun",
-    "Blood bank Uttarakhand",
-    "Advanced Blood Component Lab",
-    "Safe Blood Donation Centre Uttarakhand",
-    "Blood Bank near Rispana Bridge Dehradun",
-    "Blood Bank on Haridwar Road Dehradun",
-    "Blood Centre in Dehradun",
-    "Blood bank Dehradun",
-    "Blood bank near me",
-    "Blood bank",
-    "Blood center",
-    "Blood bank in near me",
-    "Uttarakhand blood centre – blood bank in Dehradun",
-    "Blood bank in Dehradun",
-    "blood bank near ballupur chowk",
-    "blood bank near doon hospital",
-    "blood bank near graphic era hospital",
-    "platelet donation dehradun",
-    "blood donation dehradun",
-    "blood bank in dehradun",
-    "best blood bank in dehradun",
-    "24x7 blood bank dehradun",
-    "blood donation centre dehradun",
-    "blood bank near rispana bridge",
-    "blood bank haridwar road dehradun",
-    "blood bank near isbt dehradun",
-    "blood bank near ballupur chowk",
-    "blood bank near doon hospital",
-    "blood bank near graphic era hospital",
-    "platelet donation dehradun",
-    "blood donation dehradun",
-    "uttarakhand blood centre"
-  ],
+    title: "About UK Blood Centre | Best Blood Bank in Dehradun, Uttarakhand | Blood Bank Near Me",
+    description: "Learn about UK Blood Centre, the leading blood bank in Dehradun, Uttarakhand offering advanced lab services, compliance, and 24x7 emergency support near Rispana Bridge and Haridwar Road. Blood bank Dehradun, blood center.",
+    keywords: [
+        "About UK Blood Centre",
+        "Best blood bank in Dehradun",
+        "Blood bank Uttarakhand",
+        "Advanced Blood Component Lab",
+        "Safe Blood Donation Centre Uttarakhand",
+        "Blood Bank near Rispana Bridge Dehradun",
+        "Blood Bank on Haridwar Road Dehradun",
+        "Blood Centre in Dehradun",
+        "Blood bank Dehradun",
+        "Blood bank near me",
+        "Blood bank",
+        "Blood center",
+        "Blood bank in near me",
+        "Uttarakhand blood centre – blood bank in Dehradun",
+        "Blood bank in Dehradun",
+        "blood bank near ballupur chowk",
+        "blood bank near doon hospital",
+        "blood bank near graphic era hospital",
+        "platelet donation dehradun",
+        "blood donation dehradun",
+        "blood bank in dehradun",
+        "best blood bank in dehradun",
+        "24x7 blood bank dehradun",
+        "blood donation centre dehradun",
+        "blood bank near rispana bridge",
+        "blood bank haridwar road dehradun",
+        "blood bank near isbt dehradun",
+        "blood bank near ballupur chowk",
+        "blood bank near doon hospital",
+        "blood bank near graphic era hospital",
+        "platelet donation dehradun",
+        "blood donation dehradun",
+        "uttarakhand blood centre"
+    ],
 };
 
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BloodBank",
-  "name": "Uttarakhand Blood Centre",
-  "url": "https://www.ukbloodcentre.com/",
-  "logo": "https://www.ukbloodcentre.com/uttarakhand-blood-centre-logo.jpg",
-  "sameAs": [
-    "https://www.facebook.com/ukbloodcentre",
-    "https://www.justdial.com/Dehradun/Uttarakhand-Blood-Centre-Near-Rispana-Pull-Haridwar-Dehradun-Road/9999PX135-X135-260222113649-H8D1_BZDET"
-  ]
+    "@context": "https://schema.org",
+    "@type": "BloodBank",
+    "name": "Uttarakhand Blood Centre",
+    "url": "https://www.ukbloodcentre.com/",
+    "logo": "https://www.ukbloodcentre.com/uttarakhand-blood-centre-logo.jpg",
+    "sameAs": [
+        "https://www.facebook.com/ukbloodcentre",
+        "https://www.justdial.com/Dehradun/Uttarakhand-Blood-Centre-Near-Rispana-Pull-Haridwar-Dehradun-Road/9999PX135-X135-260222113649-H8D1_BZDET"
+    ]
 };
 
 const faqData = {
@@ -90,9 +90,18 @@ const faqData = {
 const aboutContent = {
     title: "About Uttarakhand Blood Centre",
 
-    description:
-        "As the best blood bank in Dehradun, Uttarakhand, UK Blood Centre is inspired by the e-Raktkosh initiative and committed to ensuring a safe, sufficient, and timely supply of blood and blood components across Uttarakhand. We strictly follow national blood policy standards, maintain compliance with advanced lab technologies, and focus on quality, safety, and service to save lives. Serving areas near Rispana Bridge, Haridwar Road, ISBT, Ballupur Chowk, Doon Hospital, Graphic Era Hospital, and Indresh Hospital.",
-
+    description: (
+        <>
+        Uttarakhand Blood Centre, a unit of {" "}
+            <span className="font-semibold text-yellow-300 bg-white/10 px-2 py-1 rounded-md">
+                Parvatiya Manav Utthan Samiti
+            </span>
+            ,    As the best blood bank in Dehradun, is inspired by the e-Raktkosh initiative and committed to ensuring a safe,
+            sufficient, and timely supply of blood and blood components across Uttarakhand.
+            We strictly follow national blood policy standards, maintain compliance with
+            advanced lab technologies, and focus on quality, safety, and service to save lives.
+        </>
+    ),
     vision: [
         "Ensure safe, adequate, and accessible blood for all, anytime and anywhere.",
         "Achieve 100% voluntary, non-remunerated blood donation.",
@@ -123,50 +132,6 @@ const aboutContent = {
     ]
 };
 
-// const teamMembers = [
-//     {
-//         name: '-----',
-//         designation: 'MD Pathologist',
-//         imageUrl: 'https://placehold.co/128x128/C70039/ffffff?text=MD',
-//         bio: 'Specialist in Pathology and Transfusion Medicine, ensuring accurate testing and blood safety.'
-//     },
-//     {
-//         name: '-----',
-//         designation: 'Technical Supervisor',
-//         imageUrl: 'https://placehold.co/128x128/900C3F/ffffff?text=TS',
-//         bio: 'Supervises all technical procedures, equipment maintenance, and lab operations.'
-//     },
-//     {
-//         name: '-----',
-//         designation: 'Blood Bank Technician',
-//         imageUrl: 'https://placehold.co/128x128/581845/ffffff?text=BT',
-//         bio: 'Handles blood collection, testing, component preparation, and storage.'
-//     },
-//     {
-//         name: '-----',
-//         designation: 'Blood Bank Counselor',
-//         imageUrl: 'https://placehold.co/128x128/FFC300/800000?text=BC',
-//         bio: 'Provides donor counseling, awareness, and ensures donor comfort and safety.'
-//     },
-//     {
-//         name: '-----',
-//         designation: 'Public Relations Officer (PRO)',
-//         imageUrl: 'https://placehold.co/128x128/FF5733/ffffff?text=PRO',
-//         bio: 'Manages public relations, donation camps, and community engagement programs.'
-//     },
-//     {
-//         name: '-----',
-//         designation: 'GNM Nurse',
-//         imageUrl: 'https://placehold.co/128x128/33A1FF/ffffff?text=GNM',
-//         bio: 'Assists in donor care, blood collection, and maintains medical support services.'
-//     }
-// ];
-
-// =======================================================================
-// REUSABLE COMPONENTS
-// =======================================================================
-
-// Donation Step Card
 const DonationStepCard = ({ icon: Icon, title, description }) => (
     <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg  transition duration-300 hover:shadow-2xl hover:border-red-700 h-full">
         <Icon className="w-8 h-8 text-red-600 mb-4 animate-pulse-hover" />
@@ -183,51 +148,13 @@ const SectionHeader = ({ title, subtitle }) => (
     </div>
 );
 
-// =======================================================================
-// NEW COMPONENT: Our Team Section
-// =======================================================================
-// const OurTeamSection = () => {
-//     return (
-//         <section className="py-20 bg-white">
-//             <div className="max-w-7xl mx-auto px-4">
-//                 <SectionHeader
-//                     title="Meet Our Dedicated Team"
-//                     subtitle="Leadership in Blood Safety"
-//                 />
-
-//                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-//                     {teamMembers.map((member, index) => (
-//                         <div key={index} className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-xl transition transform hover:scale-[1.02] duration-300">
-//                             <img
-//                                 className="w-28 h-28 object-cover rounded-full mb-4 ring-4 ring-red-200"
-//                                 src={member.imageUrl}
-//                                 alt={member.name}
-//                             />
-//                             <h3 className="text-xl font-bold text-red-800 mb-1">{member.name}</h3>
-//                             <p className="text-sm font-medium text-gray-600 mb-3">{member.designation}</p>
-//                             <p className="text-xs italic text-gray-500">{member.bio}</p>
-//                         </div>
-//                     ))}
-//                 </div>
-
-//                 <p className="text-center mt-12 text-gray-500 text-sm italic">
-//                     <CornerRightDown className="inline w-4 h-4 mr-1 text-red-500" /> And a network of hundreds of dedicated volunteers and staff.
-//                 </p>
-//             </div>
-//         </section>
-//     );
-// };
-
-// =======================================================================
-// Donation Steps Section
-// =======================================================================
 const Certifications = () => {
     const steps = [
         { icon: BookOpen, title: 'NBTC Guidelines', description: 'We strictly follow National Blood Transfusion Council guidelines.' },
 
         { icon: FileCheck, title: 'FDA License', description: 'Licensed and regulated under FDA norms.' },
 
-        { icon: Database, title: 'e-RaktKosh', description: 'Integrated with national blood bank network.' },
+        { icon: Database, title: 'e-Raktkosh', description: 'Integrated with national blood bank network.' },
 
         { icon: Shield, title: 'NACO Standards', description: 'Follow national safety and screening standards.' },
 
@@ -586,7 +513,7 @@ const AboutPage = () => {
 
                 <TechnologyAndQualitySection />
 
-             
+
 
             </div>
         </>

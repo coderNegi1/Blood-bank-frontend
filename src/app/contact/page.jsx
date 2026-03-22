@@ -1,6 +1,6 @@
 export const metadata = {
   title:
-    "Dehradun Blood Bank Contact Number | Uttarakhand Blood Centre",
+    "Dehradun Blood Bank Contact Number- 9084311316 | Uttarakhand Blood Centre",
   description:
     "Looking for a blood bank near Rispana Bridge, ISBT, Ballupur Chowk, Doon Hospital or Graphic Era Hospital in Dehradun? We provide PRBC Blood, SDP Platelets, Random Donor Platelets, Fresh Frozen Plasma and Pediatric Red Cells with 24/7 emergency support.",
 };
@@ -55,7 +55,16 @@ const ContactUs = () => {
                   </a>
                 </h3>
                 <p className="text-slate-600 leading-relaxed font-medium">
-                  First Floor, Uttarakhand Blood Centre,<br />
+                  First Floor,{" "}
+                  <a
+                    href="https://share.google/FMvyiCSkrN0jG6VSX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 font-semibold hover:underline hover:text-red-700"
+                  >
+                    Uttarakhand Blood Centre
+                  </a>,
+                  <br />
                   100, Haridwar Road, Near Rispana Bridge,<br />
                   Dehradun, Uttarakhand, India - 248001
                 </p>

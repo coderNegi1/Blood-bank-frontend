@@ -4,81 +4,65 @@ import { Search, ChevronDown, ChevronUp, Clock, Droplets, ShieldCheck, HeartPuls
 
 const FAQ_DATA = [
   {
-    question: "Is the blood bank open 24/7 for emergencies?",
-    answer: "Yes, our blood bank and emergency dispatch services operate 24 hours a day, 7 days a week, 365 days a year to ensure life-saving blood is always available."
+    question: "Which is the best blood bank in Dehradun?",
+    answer:
+      "Uttarakhand Blood Centre is a trusted blood bank in Dehradun providing safe blood and blood components with 24×7 emergency service.",
   },
   {
-    question: "Who can donate blood?",
-    answer: "Any healthy adult between 18-65 years of age, weighing at least 45kg, with a hemoglobin level of 12.5g/dL or higher can generally donate blood."
+    question: "Is blood available 24 hours in Dehradun?",
+    answer:
+      "Yes, Uttarakhand Blood Centre provides 24×7 emergency blood supply in Dehradun for patients in need.",
   },
   {
-    question: "How often can I donate blood?",
-    answer: "Healthy males can donate every 3 months (90 days), and healthy females can donate every 4 months (120 days)."
+    question: "Where can I donate blood in Dehradun?",
+    answer:
+      "You can donate blood at Uttarakhand Blood Centre, a voluntary blood donation centre in Dehradun that welcomes healthy donors.",
+  },
+  {
+    question: "Is platelet donation available in Dehradun?",
+    answer:
+      "Yes, Uttarakhand Blood Centre provides plateletpheresis (SDP platelet donation) facility in Dehradun.",
+  },
+  {
+    question: "Which blood groups are available at the blood bank?",
+    answer:
+      "All major blood groups including A, B, AB and O positive and negative are available at Uttarakhand Blood Centre depending on stock availability.",
+  },
+  {
+    question: "Is plasma available in Dehradun blood bank?",
+    answer:
+      "Yes, Uttarakhand Blood Centre provides plasma components including Fresh Frozen Plasma (FFP).",
+  },
+  {
+    question: "Can I get emergency blood near Rispana Bridge Dehradun?",
+    answer:
+      "Yes, Uttarakhand Blood Centre near Rispana Bridge provides 24x7 emergency blood supply.",
+  },
+  {
+    question: "What blood components are available in Dehradun?",
+    answer:
+      "Uttarakhand Blood Centre provides blood components like PRBC, Platelets, Plasma and SDP platelets.",
+  },
+  {
+    question: "Is voluntary blood donation accepted in Dehradun?",
+    answer:
+      "Yes, healthy individuals can donate blood voluntarily at Uttarakhand Blood Centre.",
+  },
+  {
+    question: "How can I contact a blood bank in Dehradun?",
+    answer:
+      "You can contact Uttarakhand Blood Centre for blood availability and donation information.",
   },
   {
     question: "Is blood donation safe?",
-    answer: "Absolutely. We use sterile, disposable equipment for every donor, ensuring there is no risk of contracting any diseases during the process."
+    answer:
+      "Yes, blood donation at Uttarakhand Blood Centre is completely safe and done using sterile and disposable equipment.",
   },
   {
-    question: "How long does the donation process take?",
-    answer: "The actual blood withdrawal takes only 8-10 minutes. However, the entire process—including registration, medical check-up, and refreshment—takes about 45-60 minutes."
+    question: "Can hospitals in Dehradun get blood from this centre?",
+    answer:
+      "Yes, hospitals and patients can obtain blood and blood components from Uttarakhand Blood Centre as per medical requirements.",
   },
-  {
-    question: "Can I donate if I have a tattoo or piercing?",
-    answer: "You must wait for at least 6 to 12 months after getting a tattoo or body piercing before you are eligible to donate blood."
-  },
-  {
-    question: "Do I need to fast before donating blood?",
-    answer: "No, you should never donate on an empty stomach. Have a light meal and drink plenty of water or non-alcoholic fluids before donation."
-  },
-  {
-    question: "What should I do after donating blood?",
-    answer: "Rest for 10-15 minutes, have refreshments, drink plenty of fluids for the next 24 hours, and avoid strenuous physical activity or lifting heavy weights for the rest of the day."
-  },
-  {
-    question: "Can I donate blood if I am taking medication?",
-    answer: "It depends on the medication. While common medicines like vitamins or birth control are fine, antibiotics or blood thinners require a waiting period. Please consult our medical officer during screening."
-  },
-  {
-    question: "How is my blood used after donation?",
-    answer: "Your blood is tested, processed into components (Red Cells, Plasma, Platelets), and stored. One single donation can save up to three lives."
-  },
-  {
-    question: "What are the common side effects of donation?",
-    answer: "Most people feel fine. Some may experience slight dizziness or bruising at the needle site, which usually disappears quickly with rest and fluids."
-  },
-  {
-    question: "Can I donate if I recently had a cold or flu?",
-    answer: "You should be completely symptom-free for at least 7 days before donating blood."
-  },
-  {
-    question: "Is my personal and medical information kept confidential?",
-    answer: "Yes, we use a high-security digital documentation system. All donor records and test results are strictly confidential."
-  },
-  {
-    question: "What tests are performed on the donated blood?",
-    answer: "Every unit is tested for Blood Group (ABO/Rh) and screened for infections like HIV, Hepatitis B & C, Syphilis, and Malaria."
-  },
-  {
-    question: "Can I donate if I have high blood pressure?",
-    answer: "Yes, provided your blood pressure is under control and within the acceptable range at the time of donation."
-  },
-  {
-    question: "Do I get any benefits or certificates for donating?",
-    answer: "Yes, donors receive a donor card/certificate, a basic health check-up report, and the immense satisfaction of saving lives."
-  },
-  {
-    question: "Can a pregnant or breastfeeding woman donate blood?",
-    answer: "No. Pregnant women and breastfeeding mothers are deferred from donation for the health and safety of both mother and child."
-  },
-  {
-    question: "How do I request blood in an emergency?",
-    answer: "Contact our 24/7 helpline or visit our reception with a valid doctor's requisition form and a blood sample of the patient for cross-matching."
-  },
-  {
-    question: "How can I organize a blood donation camp in my community?",
-    answer: "You can reach out to our 'Camp Outreach' team via our website or 24/7 helpline. We provide the medical team, equipment, and logistics."
-  }
 ];
 
 const AccordionItem = ({ question, answer, isOpen, onClick }) => {
@@ -98,9 +82,8 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
         )}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="px-6 pb-5 text-gray-600 leading-relaxed bg-white">
           {answer}
@@ -165,7 +148,7 @@ export default function App() {
             <div className="p-12 text-center">
               <Info className="w-12 h-12 text-gray-300 mx-auto mb-4" />
               <p className="text-gray-500 text-lg">No results found for "{searchQuery}"</p>
-              <button 
+              <button
                 onClick={() => setSearchQuery('')}
                 className="mt-4 text-red-600 font-semibold hover:underline"
               >
@@ -175,7 +158,7 @@ export default function App() {
           )}
         </div>
 
-       
+
       </div>
     </div>
   );
