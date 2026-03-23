@@ -1,21 +1,29 @@
-import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { Phone } from "lucide-react";
+import { Phone, ArrowLeft } from "lucide-react";
 
-const CRYOComponent = () => {
-    const service = {
-        title: "Cryoprecipitate",
-        seoTitle: "Cryoprecipitate Dehradun | Concentrated Clotting Factors",
-        seoDesc: "Leading supplier of Cryoprecipitate in Dehradun. Highly concentrated clotting factors for Hemophilia and massive trauma.",
-        keywords: "Cryoprecipitate Dehradun, Hemophilia Treatment Dehradun, Clotting Factor Blood Bank",
-        image: "/Cryoprecipitate.webp",
-        desc: "Cryoprecipitate is a specialized blood component rich in Fibrinogen and Factor VIII. It is the most concentrated way to treat hemophilia and severe bleeding disorders.",
-        howItWorks: "FFP is thawed slowly at controlled temperatures, creating a concentrated precipitate rich in clotting factors, which is then re-frozen for emergency use.",
-        usedFor: ["Hemophilia treatment in Uttarakhand", "Fibrinogen deficiency", "Massive trauma bleeding", "Severe coagulation deficiencies"],
-        benefits: ["Ultra-high concentration of factors", "Superior for bleeding control", "Life-saving for hemophilia", "Targeted therapy for trauma"]
-    };
+// SEO Optimized Metadata
+export const metadata = {
+    title: "Whole Human Blood Dehradun | 24/7 Blood Bank near Indresh Hospital",
+    description: "Get freshly collected Whole Human Blood in Dehradun. 24x7 emergency blood transfusion services for trauma and major surgeries. Safety screened units.",
+    keywords: "Whole Human Blood Dehradun, Blood Bank Dehradun, Emergency Blood Transfusion Uttarakhand",
+    openGraph: {
+        title: "Whole Human Blood Dehradun | 24/7 Blood Bank near Indresh Hospital",
+        description: "Get freshly collected Whole Human Blood in Dehradun. 24x7 emergency blood transfusion services for trauma and major surgeries. Safety screened units.",
+        images: ["/wbc.webp"],
+    },
+};
 
+const service = {
+    title: "Whole Human Blood (WHB)",
+    image: "/wbc.webp",
+    desc: "Whole Human Blood is a complete, unseparated blood unit containing red cells, white cells, platelets, and plasma. As a leading blood centre in Dehradun, we provide 24/7 availability for patients who have suffered massive blood loss or trauma. Our units are strictly screened and stored between 1°C and 6°C to preserve integrity.",
+    howItWorks: "Blood is collected from healthy voluntary donors at our Dehradun centre. It undergoes rigorous screening for HIV, Hepatitis, and other diseases before being stored under controlled temperatures for emergency supply.",
+    usedFor: ["Major accident or trauma cases in Dehradun", "Severe blood loss during surgery", "Emergency transfusions near Indresh Hospital", "Massive bleeding during childbirth"],
+    benefits: ["Comprehensive solution for massive blood loss", "Quick replacement of all components", "Supports oxygen delivery to vital organs", "Stabilizes critically ill patients quickly"]
+};
+
+export default function WHBServicePage() {
     return (
         <div className="min-h-screen bg-slate-50">
             <div className="relative h-[350px]">
@@ -54,6 +62,7 @@ const CRYOComponent = () => {
                     </ul>
                 </div>
 
+                {/* Local SEO Text */}
                 <p className="mt-10 text-sm text-gray-400 italic">
                     Serving emergency blood and platelet needs across Dehradun, Uttarakhand with 24/7 support across the city.
                 </p>
@@ -67,6 +76,4 @@ const CRYOComponent = () => {
             </div>
         </div>
     );
-};
-
-export default CRYOComponent;
+}
