@@ -162,10 +162,10 @@ export default function App() {
               </span>
               <p className="text-xs font-medium mb-1 text-slate-300">Location Coordinates</p>
               <code className="text-[10px] bg-slate-900 px-2 py-1 rounded text-rose-400 font-mono">
-                30.2968° N, 78.0549° E
+                Uttarakhand Blood Centre Haridwar Road Dehradun
               </code>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=30.2968,78.0549"
+                 href="https://maps.google.com/?cid=8458687874938647954"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 text-xs bg-rose-600 text-white px-4 py-1.5 rounded hover:bg-rose-700 transition-all font-bold shadow-md"
