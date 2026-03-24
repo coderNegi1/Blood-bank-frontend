@@ -9,23 +9,27 @@ const poppins = Poppins({
   display: "swap",
 });
 
+// 1. Metadata Update: Yahan se Google main title uthayega
 export const metadata = {
-  title: "Uttarakhand Blood Centre",
-  description: "Donate blood, save lives — Official Blood Donation Platform.",
+  title: "Blood Bank Dehradun - Uttarakhand Blood Bank",
+  description: "Best blood bank in Dehradun, Uttarakhand. Providing 24/7 emergency blood services, PRBC, Platelets, and FFP. Donate blood, save lives.",
+  alternates: {
+    canonical: "https://www.ukbloodcentre.com",
+  },
   icons: {
     icon: "/uttarakhand-blood-centre-logo.jpg", 
   },
 };
 
 export default function RootLayout({ children }) {
-  // Structured Data for Google
+  // 2. Structured Data Update: Google Trust ke liye ye important hai
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
         "@id": "https://www.ukbloodcentre.com/#organization",
-        "name": "Uttarakhand Blood Centre",
+        "name": "Blood Bank Dehradun - Uttarakhand Blood Bank",
         "url": "https://www.ukbloodcentre.com",
         "logo": "https://www.ukbloodcentre.com/uttarakhand-blood-centre-logo.jpg",
         "sameAs": [
@@ -39,7 +43,7 @@ export default function RootLayout({ children }) {
         "@type": "WebSite",
         "@id": "https://www.ukbloodcentre.com/#website",
         "url": "https://www.ukbloodcentre.com",
-        "name": "Uttarakhand Blood Centre",
+        "name": "Blood Bank Dehradun - Uttarakhand Blood Bank",
         "publisher": {
           "@id": "https://www.ukbloodcentre.com/#organization"
         }
