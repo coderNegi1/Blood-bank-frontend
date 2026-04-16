@@ -42,8 +42,12 @@ const WholeBloodPage = () => {
                         Fast & Reliable Whole Blood Availability in Dehradun
                     </h2>
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                        Looking for whole blood near you in Dehradun? <strong>Uttarakhand Blood Centre</strong> maintains a ready stock of 
-                        multiple blood groups, ensuring instant blood supply for surgeries, trauma care, and critical treatments. 
+                        Looking for whole blood near you in Dehradun? <Link href="/">
+                            <strong className="text-[#BC003D] hover:underline cursor-pointer">
+                                Uttarakhand Blood Centre
+                            </strong>
+                        </Link> maintains a ready stock of
+                        multiple blood groups, ensuring instant blood supply for surgeries, trauma care, and critical treatments.
                         We specialize in emergency blood requests, helping patients get life-saving transfusions without delay.
                     </p>
                 </div>
@@ -54,7 +58,7 @@ const WholeBloodPage = () => {
                         100% Tested & Safe Blood Units
                     </h2>
                     <p className="text-gray-600 mb-6">
-                        All whole human blood units are thoroughly screened and certified following strict medical guidelines. 
+                        All whole human blood units are thoroughly screened and certified following strict medical guidelines.
                         We ensure the highest safety standards for every unit we provide.
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -119,7 +123,7 @@ const WholeBloodPage = () => {
                 <div className="bg-slate-900 rounded-3xl p-10 text-center text-white">
                     <h2 className="text-3xl font-bold mb-4">Book Whole Human Blood Today</h2>
                     <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                        Don’t wait in critical moments. Get fast, safe, and affordable whole blood services in Uttarakhand. 
+                        Don’t wait in critical moments. Get fast, safe, and affordable whole blood services in Uttarakhand.
                         Contact us now for instant availability.
                     </p>
                     <a

@@ -17,7 +17,7 @@ export default function sitemap() {
 
     // SERVICE DETAIL PAGES
     {
-      url: "https://www.ukbloodcentre.com/services/whb",
+      url: "https://www.ukbloodcentre.com/services/whole-blood", // Updated from whb
       priority: 0.8,
     },
     {
@@ -42,7 +42,7 @@ export default function sitemap() {
     },
 
     {
-      url: "https://www.ukbloodcentre.com/donation-process",
+      url: "https://www.ukbloodcentre.com/blood-donation", // Updated from donation-process
       priority: 0.9,
     },
 
