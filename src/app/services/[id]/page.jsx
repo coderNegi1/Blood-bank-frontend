@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
 // Services list (for validation)
-const services = ['whb', 'prbc', 'sdp', 'rdp', 'ffp', 'cryo'];
+const services = ['whole-human-blood-dehradun', 'prbc', 'sdp', 'rdp', 'ffp', 'cryo'];
 
 export default function ServiceDetail({ params }) {
   const { id } = params;

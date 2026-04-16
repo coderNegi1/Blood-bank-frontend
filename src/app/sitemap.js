@@ -17,7 +17,7 @@ export default function sitemap() {
 
     // SERVICE DETAIL PAGES
     {
-      url: "https://www.ukbloodcentre.com/services/whole-blood", // Updated from whb
+      url: "https://www.ukbloodcentre.com/services/whole-human-blood-dehradun", // Updated from whb
       priority: 0.8,
     },
     {

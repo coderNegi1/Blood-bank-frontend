@@ -39,7 +39,7 @@ const App = () => {
   // Service categories based on user request
   const services = [
     {
-      id: "whb",
+      id: "whole-human-blood-dehradun",
       title: "Whole Human Blood",
       shortTitle: "WHB",
       desc: "Freshly collected whole blood containing all components. Vital for massive blood loss and exchange transfusions.",
@@ -53,7 +53,7 @@ const App = () => {
       image: "../prbc.webp",
     },
     {
-      id: "sdp",
+      id: "single-donor-platelets-sdp-dehradun",
       title: "Plateletpheresis (SDP) – 24×7",
       shortTitle: "SDP - 24X7",
       desc: "Available around the clock, Single Donor Platelet (SDP) collection helps patients fighting cancer, dengue, or undergoing major surgeries.",
