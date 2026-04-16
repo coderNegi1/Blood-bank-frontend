@@ -113,7 +113,7 @@ export default function App() {
         <div>
           <h4 className="text-white font-semibold mb-6 border-b border-rose-600/30 pb-2 inline-block">Quick Links</h4>
           <ul className="space-y-3 text-sm">
-            {['Home', 'About Us', 'Blood Availability', 'Donation Process', 'Events', 'Privacy Policy'].map((item) => (
+            {['Home', 'About Us', 'Blood Availability', 'Blood-Donation', 'Events', 'Privacy Policy'].map((item) => (
               <li key={item}>
                 <a href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-rose-500 transition-colors flex items-center gap-2">
                   <span className="text-rose-600">›</span> {item}

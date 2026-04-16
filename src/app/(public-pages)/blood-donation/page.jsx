@@ -1,55 +1,40 @@
 "use client";
-// === METADATA ===
+
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+// === METADATA UPDATED WITH NEW CONTENT ===
 const metadata = {
-  title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre | Blood Bank Near Me",
-  description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, voluntary camps, and donor registration at UK Blood Centre, Uttarakhand. Blood bank Dehradun, blood center.",
+  title: "Blood Donation in Dehradun | Donate Blood at Uttarakhand Blood Centre",
+  description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, and voluntary camps at UK Blood Centre, Uttarakhand. Safe and professional blood donation facility.",
   keywords: [
     "Donate Blood in Dehradun",
-    "Blood Donation Process",
+    "Blood Donation in Dehradun",
+    "Blood Donation Process Dehradun",
     "Voluntary Blood Donation Dehradun",
-    "Blood Donation Benefits",
-    "Voluntary Blood Donation Camp Dehradun",
+    "Blood Bank Dehradun",
+    "Uttarakhand Blood Centre",
     "Blood Donor Registration Dehradun",
-    "Safe Blood Donation Centre Uttarakhand",
-    "Blood Donation Centre Dehradun",
-    "Blood Donation Centre near me",
-    "Blood bank Dehradun",
+    "Organize Blood Donation Camp Dehradun",
     "Blood bank near me",
-    "Blood bank",
-    "Blood center",
-    "Blood bank in near me",
-    "Uttarakhand blood centre – blood bank in Dehradun",
-    "Blood bank in Dehradun"
+    "Blood donation benefits"
   ],
   canonical: "https://www.ukbloodcentre.com/donation-process",
   openGraph: {
-    title: "Donate Blood in Dehradun | Blood Donation Process & Benefits | UK Blood Centre",
-    description: "Learn how to donate blood in Dehradun. Discover the blood donation process, benefits, voluntary camps, and donor registration at UK Blood Centre, Uttarakhand.",
+    title: "Blood Donation in Dehradun | Donate Blood at Uttarakhand Blood Centre",
+    description: "Safe, professional, and medically supervised blood donation facility in Dehradun. Help save lives today.",
     url: "https://www.ukbloodcentre.com/donation-process",
-    images: [
-      {
-        url: "/ukbloodcentreLogo.jpg",
-        width: 800,
-        height: 600,
-        alt: "Blood Donation Process Dehradun"
-      }
-    ]
-  },
-  other: {
-    "geo.region": "IN-UT",
-    "geo.placename": "Dehradun, Uttarakhand, India"
+    images: [{ url: "/ukbloodcentreLogo.jpg", width: 800, height: 600, alt: "Blood Donation Dehradun" }]
   }
 };
 
-// === STRUCTURED DATA ===
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
-  "name": "UK Blood Centre",
+  "name": "Uttarakhand Blood Centre",
   "description": "Blood donation centre in Dehradun offering voluntary blood donation camps and safe donation processes.",
   "url": "https://www.ukbloodcentre.com",
-  "telephone": "+91-XXXXXXXXXX",
-  "email": "info@ukbloodcentre.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Dehradun",
@@ -58,61 +43,7 @@ const structuredData = {
   }
 };
 
-const faqData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are the benefits of donating blood?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Blood donation benefits include saving lives, improving heart health, reducing cancer risk, and free health check-ups."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How to register as a blood donor in Dehradun?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Register as a blood donor in Dehradun by visiting UK Blood Centre or joining our voluntary blood donation camps."
-      }
-    }
-  ]
-};
-
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-function Page() {
-  return (
-    <div>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords.join(', ')} />
-        <link rel="canonical" href={metadata.canonical} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:width" content={metadata.openGraph.images[0].width} />
-        <meta property="og:image:height" content={metadata.openGraph.images[0].height} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
-      </Head>
-      {/* Rest of the page content */}
-    </div>
-  );
-}
-
-// === EMBEDDED DATA START ===
+// === DATA ARRAY ===
 const donationTypes = [
   {
     id: 'whole-blood',
@@ -262,124 +193,46 @@ const donationTypes = [
     ],
     fact: "The primary purpose of Cryoprecipitate is to rapidly replace Fibrinogen, a critical clotting protein.",
   },
-  // {
-  //   id: 'granulocytes',
-  //   name: "Granulocytes Donation",
-  //   shortName: "Granulocytes",
-  //   description: "Granulocytes (a type of White Blood Cell - WBC) are specialized immune cells collected via Apheresis, similar to platelets. They are used to treat severe, life-threatening bacterial infections in immunocompromised patients who cannot produce enough of their own.",
-  //   steps: [
-  //     { title: "Pre-Donation Treatment", desc: "The donor receives medication (e.g., G-CSF) to temporarily increase the number of granulocytes circulating in the blood, maximizing the collection." },
-  //     { title: "Apheresis Procedure", desc: "Blood is drawn, and the Apheresis machine selectively collects the granulocytes (and some red cells and plasma). A sedimenting agent is often added to improve separation." },
-  //     { title: "Duration of Process", desc: "Can take up to 2-3 hours due to the complexity of collection." },
-  //     { title: "Shelf Life", desc: "Must be used immediately—ideally within 24 hours—as they have an extremely short shelf life." },
-  //   ],
-  //   eligibility: [
-  //     "✅ Age: Typically 18-60 years, excellent health.",
-  //     "✅ Interval: Up to 6 times a year (must wait at least 48 hours between donations).",
-  //     "❌ Restrictions: Donors must be screened and willing to receive the mobilization drug (G-CSF). Must not be pregnant.",
-  //   ],
-  //   usedFor: [
-  //     "Severely neutropenic patients (low WBC count) with life-threatening bacterial or fungal infections that are not responding to antibiotics.",
-  //     "Neonatal sepsis (in rare cases).",
-  //   ],
-  //   fact: "Due to the short shelf life and special pre-donation medicine, Granulocyte donations are almost always scheduled specifically for a known, critically ill patient.",
-  // },
+
 ];
-// === EMBEDDED DATA END ===
 
 const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
   const RedAccent = "text-[#BC003D]";
   const LightRedBG = "bg-red-50 border-l-4 border-[#BC003D]";
 
-  const DonationProcess = ({ steps }) => (
-    <div className="space-y-6 relative border-l border-gray-200 ml-3 py-4">
-      <h3 className={`text-xl font-semibold mb-6 ${RedAccent}`}>Donation Process (Step-by-Step)</h3>
-      {steps.map((step, index) => (
-        <div key={index} className="relative pl-8">
-          <div className={`absolute -left-3 top-1 w-6 h-6 rounded-full ${RedAccent} bg-white border-2 border-[#BC003D] flex items-center justify-center text-white text-xs font-bold`}>
-            {index + 1}
-          </div>
-          <div className="ml-2">
-            <h4 className="text-lg font-medium text-gray-800">{step.title}</h4>
-            <p className="text-sm text-gray-600 mt-1">{step.desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-
-  const DonorEligibility = ({ eligibility }) => (
-    <div className="mt-8">
-      <h3 className={`text-xl font-semibold mb-4 ${RedAccent}`}>Donor Eligibility & Frequency</h3>
-      <ul className="space-y-2 text-gray-700">
-        {eligibility.map((item, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-600 mr-2 mt-1">
-              {item.startsWith('❌') ? '🚫' : '✅'}
-            </span>
-            <span className="flex-1">{item.replace('✅ ', '').replace('❌ ', '')}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-
-  const UsedFor = ({ usedFor }) => (
-    <div className="mt-8">
-      <h3 className={`text-xl font-semibold mb-4 ${RedAccent}`}>Kahan Use Hota Hai (Recipients)</h3>
-      <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-        {usedFor.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-
-  const KeyFacts = ({ fact }) => (
-    <div className={`mt-8 ${LightRedBG} p-4 rounded-lg shadow-inner`}>
-      <p className="font-bold text-[#BC003D] flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-        </svg>
-        Key Fact
-      </p>
-      <p className="text-sm text-gray-700 mt-1">{fact}</p>
-    </div>
-  );
-
   return (
-    <div id={component.id} className="scroll-mt-10 border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <button
-        onClick={toggleAccordion}
-        className="w-full text-left p-6 flex justify-between items-center bg-white hover:bg-red-50 focus:outline-none transition duration-150"
-      >
+    <div id={component.id} className="scroll-mt-10 border border-gray-200 rounded-xl overflow-hidden shadow-lg bg-white mb-6 transition-all duration-300">
+      <button onClick={toggleAccordion} className="w-full text-left p-6 flex justify-between items-center hover:bg-red-50 transition duration-150">
         <div>
-          <h2 className={`font-extrabold text-2xl md:text-3xl ${RedAccent}`}>
-            <span className="mr-2">🩸</span> {component.name}
-          </h2>
-          <p className="text-gray-500 mt-1 text-sm md:text-base">
-            {component.description.substring(0, 100)}... (Tap to see full details)
-          </p>
+          <h2 className={`font-extrabold text-2xl ${RedAccent}`}>🩸 {component.name}</h2>
+          <p className="text-gray-500 mt-1 text-sm">Tap to see full process and eligibility</p>
         </div>
-        <svg
-          className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'} ${RedAccent}`}
-          fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
+        <span className={`transform transition-transform text-2xl ${RedAccent} ${isOpen ? 'rotate-180' : ''}`}>▼</span>
       </button>
 
       {isOpen && (
-        <div className="p-6 pt-0 bg-white border-t border-gray-200">
-          <p className="text-gray-800 mb-6 mt-4">{component.description}</p>
+        <div className="p-6 pt-0 border-t border-gray-100 animate-fadeIn">
+          <p className="text-gray-800 mb-6 mt-4 leading-relaxed">{component.description}</p>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="md:col-span-1">
-              <DonationProcess steps={component.steps} />
+            <div className="space-y-4">
+              <h3 className={`text-xl font-bold ${RedAccent}`}>Donation Process</h3>
+              {component.steps.map((step, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className={`flex-shrink-0 w-6 h-6 rounded-full ${RedAccent} bg-white border-2 border-[#BC003D] flex items-center justify-center text-xs font-bold`}>{i + 1}</div>
+                  <div><h4 className="font-semibold text-gray-800">{step.title}</h4><p className="text-sm text-gray-600">{step.desc}</p></div>
+                </div>
+              ))}
             </div>
-            <div className="md:col-span-1">
-              <DonorEligibility eligibility={component.eligibility} />
-              <UsedFor usedFor={component.usedFor} />
-              <KeyFacts fact={component.fact} />
+            <div>
+              <h3 className={`text-xl font-bold ${RedAccent} mb-4`}>Eligibility & Frequency</h3>
+              <ul className="space-y-2 text-gray-700 mb-6">
+                {component.eligibility.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+              <h3 className={`text-xl font-bold ${RedAccent} mb-4`}>Kahan Use Hota Hai</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-2 mb-6">
+                {component.usedFor.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+              <div className={`${LightRedBG} p-4 rounded-lg`}><p className="text-sm italic"><strong>Fact:</strong> {component.fact}</p></div>
             </div>
           </div>
         </div>
@@ -388,57 +241,136 @@ const AccordionItem = ({ component, isOpen, toggleAccordion }) => {
   );
 };
 
-const DonationProcessPage = () => {
+const DonationPage = () => {
   const [openId, setOpenId] = useState(null);
-
-  // Logic to handle hash and open correct accordion on mount
-  useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-      setOpenId(hash);
-      // Optional: Smooth scroll to the element
-      setTimeout(() => {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, []);
-
-  const toggleAccordion = (id) => {
-    setOpenId(openId === id ? null : id);
-  };
+  const RedText = "text-[#BC003D]";
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto p-6 lg:p-10">
-        <header className="text-center mb-12 pt-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#BC003D] mb-4 tracking-tight">
-            Comprehensive Guide to Blood Donation Components
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Explore the different ways you can donate blood and the specific life-saving components that help patients in need.
-          </p>
-        </header>
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(', ')} />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Head>
 
-        <div className="space-y-8">
-          {donationTypes.map((component) => (
-            <AccordionItem
-              key={component.id}
-              component={component}
-              isOpen={openId === component.id}
-              toggleAccordion={() => toggleAccordion(component.id)}
-            />
-          ))}
+      {/* --- HERO SECTION: BLOOD DONATION IN DEHRADUN --- */}
+      <div className="bg-white border-b">
+        <div className="max-w-6xl mx-auto p-6 lg:p-10 pt-16">
+          <h1 className="text-4xl md:text-5xl font-black text-[#BC003D] mb-6 leading-tight">
+            Blood Donation in Dehradun 
+          </h1>
+          <div className="text-lg text-gray-700 space-y-4 leading-relaxed max-w-4xl">
+            <p>
+              If you are looking for <strong>blood donation in Dehradun</strong>, donate blood near you, or want to register as a voluntary blood donor,
+              <strong> Uttarakhand Blood Centre, Dehradun</strong> provides a safe, professional, and medically supervised blood donation facility.
+            </p>
+            <p>
+              Our centre supports hospitals across Uttarakhand by providing safe blood collection and emergency availability. By choosing to
+              <strong> donate blood in Dehradun</strong>, you directly help patients who urgently need life-saving transfusions.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/contact" className="bg-[#BC003D] text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition">Book Appointment</Link>
+            <Link href="/contact" className="border-2 border-[#BC003D] text-[#BC003D] px-8 py-4 rounded-full font-bold hover:bg-red-50 transition">Organize a Camp</Link>
+          </div>
+        </div>
+      </div>
+
+      {/* --- CONTENT BLOCKS --- */}
+      <div className="max-w-6xl mx-auto p-6 lg:p-10">
+        <div className="grid md:grid-cols-2 gap-12 mb-20">
+          <section>
+            <h2 className={`text-3xl font-bold ${RedText} mb-6`}>Donate Blood in Dehradun – Save Lives</h2>
+            <p className="text-gray-700 mb-4">People commonly donate blood at our centre to support patients suffering from:</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
+              <li>📍 Accident and trauma cases</li>
+              <li>📍 Major surgeries</li>
+              <li>📍 Cancer treatment</li>
+              <li>📍 Severe anemia</li>
+              <li>📍 Dengue deficiency</li>
+              <li>📍 Pregnancy complications</li>
+            </ul>
+          </section>
+
+          <section className="bg-white p-8 rounded-3xl shadow-sm border">
+            <h2 className={`text-2xl font-bold ${RedText} mb-6`}>Why Choose Uttarakhand Blood Centre?</h2>
+            <ul className="space-y-4 text-gray-700 text-sm">
+              <li className="flex gap-2">✅ Safe and hygienic blood donation facility</li>
+              <li className="flex gap-2">✅ Experienced medical staff & phlebotomists</li>
+              <li className="flex gap-2">✅ Modern blood collection equipment</li>
+              <li className="flex gap-2">✅ Organized voluntary donation drives</li>
+            </ul>
+          </section>
         </div>
 
-        <footer className="mt-16 text-center text-sm text-gray-500 p-4 border-t border-gray-200">
-          <p>💡 All eligibility and frequency guidelines are general; always confirm specific requirements with your local blood bank or donation center.</p>
+        {/* --- ELIGIBILITY SECTION --- */}
+        <section className="bg-slate-900 text-white p-10 rounded-[40px] mb-20">
+          <h2 className="text-3xl font-bold mb-8 text-center">Who Can Donate Blood in Dehradun?</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            <div><p className="text-4xl mb-2">🎂</p><p className="font-bold">18 to 65 Years Old</p></div>
+            <div><p className="text-4xl mb-2">⚖️</p><p className="font-bold">Min 45–50 kg Weight</p></div>
+            <div><p className="text-4xl mb-2">🩸</p><p className="font-bold">Normal Hemoglobin</p></div>
+
+
+            <div>
+              <p className="text-4xl mb-2">🧑‍🦱</p>
+              <p className="font-bold">Male</p>
+              <p>Every 3 Months</p>
+            </div>
+
+            <div>
+              <p className="text-4xl mb-2">👩</p>
+              <p className="font-bold">Female</p>
+              <p>Every 4 Months</p>
+            </div>
+
+
+          </div>
+        </section>
+
+        {/* --- DONATION PROCESS ACCORDIONS --- */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Donation Process & Components</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">The process in Dehradun at our centre is simple and safe. The actual blood donation procedure takes only 8–10 minutes.</p>
+          </div>
+
+          <div className="space-y-4">
+            {donationTypes.map((component) => (
+              <AccordionItem
+                key={component.id}
+                component={component}
+                isOpen={openId === component.id}
+                toggleAccordion={() => setOpenId(openId === component.id ? null : component.id)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* --- CAMP & FOOTER SECTION --- */}
+        <section className="text-center bg-red-50 p-12 rounded-3xl border-2 border-dashed border-red-200">
+          <h2 className={`text-3xl font-bold ${RedText} mb-4`}>Organize a Blood Donation Camp</h2>
+          <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+            Organizations, colleges, and corporate offices can organize camps in Dehradun with our support. We provide medical staff, equipment, and donor screening.
+          </p>
+          <Link href="/contact">
+            <button className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold">
+              Register Your Organization
+            </button>
+          </Link>
+        </section>
+
+        <footer className="mt-20 text-center border-t pt-10 text-gray-500">
+          <p className="font-bold text-gray-800">Uttarakhand Blood Centre – Blood Bank in Dehradun</p>
+          <p className="mt-2">💡 Your single donation can save up to 3 lives through component separation.</p>
         </footer>
       </div>
     </div>
   );
 };
 
-export default DonationProcessPage;
+export default DonationPage;
+
+
+
