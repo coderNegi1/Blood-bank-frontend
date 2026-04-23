@@ -15,34 +15,34 @@ export default function sitemap() {
       priority: 0.9,
     },
 
-    // SERVICE DETAIL PAGES
+    // SERVICE DETAIL PAGES (UPDATED SEO URLS)
     {
-      url: "https://www.ukbloodcentre.com/services/whole-human-blood-dehradun", // Updated from whb
+      url: "https://www.ukbloodcentre.com/services/whole-human-blood-dehradun",
       priority: 0.8,
     },
     {
-      url: "https://www.ukbloodcentre.com/services/prbc",
+      url: "https://www.ukbloodcentre.com/services/packed-red-blood-cells-dehradun",
       priority: 0.8,
     },
     {
-      url: "https://www.ukbloodcentre.com/services/sdp",
-      priority: 0.9, // important page
+      url: "https://www.ukbloodcentre.com/services/single-donor-platelets-sdp-dehradun",
+      priority: 0.9,
     },
     {
-      url: "https://www.ukbloodcentre.com/services/rdp",
+      url: "https://www.ukbloodcentre.com/services/random-donor-platelets-dehradun",
       priority: 0.8,
     },
     {
-      url: "https://www.ukbloodcentre.com/services/ffp",
+      url: "https://www.ukbloodcentre.com/services/fresh-frozen-plasma-dehradun",
       priority: 0.8,
     },
     {
-      url: "https://www.ukbloodcentre.com/services/cryo",
+      url: "https://www.ukbloodcentre.com/services/cryoprecipitate-dehradun",
       priority: 0.8,
     },
 
     {
-      url: "https://www.ukbloodcentre.com/blood-donation", // Updated from donation-process
+      url: "https://www.ukbloodcentre.com/blood-donation",
       priority: 0.9,
     },
 

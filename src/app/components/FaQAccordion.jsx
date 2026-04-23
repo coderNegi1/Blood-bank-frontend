@@ -5,66 +5,73 @@ import { Search, ChevronDown, ChevronUp, Clock, Droplets, ShieldCheck, HeartPuls
 const FAQ_DATA = [
   {
     question: "Which is the best blood bank in Dehradun?",
-    answer:
-      "Uttarakhand Blood Centre is a trusted blood bank in Dehradun providing safe blood and blood components with 24×7 emergency service.",
+    answer: "Uttarakhand Blood Centre is a trusted blood bank in Dehradun providing safe blood and blood components with 24×7 emergency service."
+  },
+  {
+    question: "What services does Uttarakhand Blood Bank Dehradun provide?",
+    answer: "We provide safe and tested blood units, blood components (PRBC, Platelets, Plasma), Apheresis (SDP), emergency blood support, and organize voluntary blood donation camps."
   },
   {
     question: "Is blood available 24 hours in Dehradun?",
-    answer:
-      "Yes, Uttarakhand Blood Centre provides 24×7 emergency blood supply in Dehradun for patients in need.",
+    answer: "Yes, Uttarakhand Blood Centre provides 24×7 emergency blood supply in Dehradun and nearby areas, including near Rispana Bridge."
   },
   {
-    question: "Where can I donate blood in Dehradun?",
-    answer:
-      "You can donate blood at Uttarakhand Blood Centre, a voluntary blood donation centre in Dehradun that welcomes healthy donors.",
+    question: "What is blood donation?",
+    answer: "Blood donation is a voluntary process where a healthy person donates blood to help patients in need during surgeries, emergencies, or medical treatments."
   },
   {
-    question: "Is platelet donation available in Dehradun?",
-    answer:
-      "Yes, Uttarakhand Blood Centre provides plateletpheresis (SDP platelet donation) facility in Dehradun.",
-  },
-  {
-    question: "Which blood groups are available at the blood bank?",
-    answer:
-      "All major blood groups including A, B, AB and O positive and negative are available at Uttarakhand Blood Centre depending on stock availability.",
-  },
-  {
-    question: "Is plasma available in Dehradun blood bank?",
-    answer:
-      "Yes, Uttarakhand Blood Centre provides plasma components including Fresh Frozen Plasma (FFP).",
-  },
-  {
-    question: "Can I get emergency blood near Rispana Bridge Dehradun?",
-    answer:
-      "Yes, Uttarakhand Blood Centre near Rispana Bridge provides 24x7 emergency blood supply.",
-  },
-  {
-    question: "What blood components are available in Dehradun?",
-    answer:
-      "Uttarakhand Blood Centre provides blood components like PRBC, Platelets, Plasma and SDP platelets.",
-  },
-  {
-    question: "Is voluntary blood donation accepted in Dehradun?",
-    answer:
-      "Yes, healthy individuals can donate blood voluntarily at Uttarakhand Blood Centre.",
-  },
-  {
-    question: "How can I contact a blood bank in Dehradun?",
-    answer:
-      "You can contact Uttarakhand Blood Centre for blood availability and donation information.",
+    question: "Who can donate blood?",
+    answer: "Any healthy individual aged 18–65 years, weighing at least 45–50 kg, and in good health can donate blood."
   },
   {
     question: "Is blood donation safe?",
-    answer:
-      "Yes, blood donation at Uttarakhand Blood Centre is completely safe and done using sterile and disposable equipment.",
+    answer: "Absolutely. Blood donation is a completely safe and sterile process. we use single-use disposable kits for every donor, eliminating any risk of infection."
+  },
+  {
+    question: "What is Apheresis Donation?",
+    answer: "Apheresis donation is a special type of blood donation where a machine collects only specific components (platelets or plasma) and returns the rest to the donor. It is vital for cancer and dengue patients."
+  },
+  {
+    question: "Who can donate through apheresis?",
+    answer: "Apheresis donors must meet stricter criteria: higher platelet count, good vein condition, minimum weight of 50–60 kg, and doctor’s eligibility approval."
+  },
+  {
+    question: "How often can I donate?",
+    answer: "Whole blood: Every 3 months (men) / 4 months (women). Apheresis (platelets): Every 2 weeks (as per medical advice)."
+  },
+  {
+    question: "How long does the donation process take?",
+    answer: "Whole blood donation takes 30–45 minutes total, while the Apheresis process takes about 60–90 minutes."
+  },
+  {
+    question: "Does blood donation hurt?",
+    answer: "You may feel a slight pinch when the needle is inserted, but the process is generally comfortable."
+  },
+  {
+    question: "What should I do before and after donating blood?",
+    answer: "Before: Eat a healthy meal, stay hydrated, avoid alcohol/smoking, and carry a valid ID. After: Rest for 10–15 minutes, drink fluids, and avoid heavy exercise for the day."
+  },
+  {
+    question: "Do you provide free blood services?",
+    answer: "Yes, we offer free blood support to Thalassemia patients, cancer patients, and voluntary blood donation camp organizers."
+  },
+  {
+    question: "Which blood groups and components are available?",
+    answer: "All major groups (A, B, AB, O +/-) and components like PRBC, Platelets, Plasma (FFP), and SDP platelets are available depending on stock."
+  },
+  {
+    question: "How can I find the nearest blood bank or contact you?",
+    answer: "Search 'blood bank near me' or visit Uttarakhand Blood Bank Dehradun near Rispana Bridge. You can contact us directly for availability or to organize a donation camp."
+  },
+  {
+    question: "Who benefits from blood & apheresis donation?",
+    answer: "Accident and surgery patients, cancer patients (platelets), Thalassemia patients, and Dengue patients needing platelets."
   },
   {
     question: "Can hospitals in Dehradun get blood from this centre?",
-    answer:
-      "Yes, hospitals and patients can obtain blood and blood components from Uttarakhand Blood Centre as per medical requirements.",
-  },
+    answer: "Yes, hospitals and patients can obtain blood and blood components from Uttarakhand Blood Centre as per medical requirements."
+  }
 ];
-
 const AccordionItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className="border-b border-red-100 last:border-none">

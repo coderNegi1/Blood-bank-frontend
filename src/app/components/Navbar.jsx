@@ -11,27 +11,23 @@ const Navbar = () => {
       name: "About Us",
       dropdown: [
         { name: "About", path: "/about-us" },
-        { name: "certifications", path: "/certifications" },
-        { name: "registrations", path: "/registrations" },
-
+        { name: "Certifications", path: "/certifications" },
+        { name: "Registrations", path: "/registrations" },
       ]
     },
-     { name: "Services", path: "/services" },
+    { 
+      name: "Services", 
+      path: "/services",
+      dropdown: [
+        { name: "Whole Human Blood", path: "/services/whole-human-blood-dehradun" },
+        { name: "Packed Red Blood Cells (PRBC)", path: "/services/packed-red-blood-cells-dehradun" },
+        { name: "Single Donor Platelets (SDP)", path: "/services/single-donor-platelets-sdp-dehradun" },
+        { name: "Random Donor Platelets (RDP)", path: "/services/random-donor-platelets-dehradun" },
+        { name: "Fresh Frozen Plasma (FFP)", path: "/services/fresh-frozen-plasma-dehradun" },
+        { name: "Cryoprecipitate (Cryo)", path: "/services/cryoprecipitate-dehradun" },
+      ]
+    },
     { name: "Processing Charges", path: "/processing-charges" },
-
-    // { name: "certifications", path: "/certifications" },
-
-
-    // {
-    //   name: "Media",
-    //   dropdow  n: [
-    //     { name: "Events", path: "/events" },
-    //     { name: "Blogs", path: "/blogs" },
-    //     { name: "Gallery", path: "/gallery" },
-    //   ]
-    // },
-    // { name: "Blood Availability", path: "/available-soon" },
-   
     { name: "Blood Donation", path: "/blood-donation" },
     { name: "Contact", path: "/contact" },
   ];
@@ -40,7 +36,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  // 🌟 KEY FIX → Prevent SSR mismatch
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
@@ -56,7 +51,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed md:top-11 top-18   left-0 w-full flex items-center justify-between
+      className={`fixed md:top-11 top-18 left-0 w-full flex items-center justify-between
       px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50
       ${scrolled
           ? "bg-white/70 shadow-md text-gray-700 backdrop-blur-lg py-1"
@@ -64,7 +59,6 @@ const Navbar = () => {
         }`}
     >
       {/* Logo */}
-
       <div>
         <Link href="/" className="flex items-center gap-2">
           <img
@@ -74,9 +68,7 @@ const Navbar = () => {
           ${scrolled ? "opacity-80" : ""}`}
           />
         </Link>
-        {/* <p className="text-white w-[150px] text-[10px]">A unit of Parvatiya Manav Utthan Samiti.</p> */}
       </div>
-
 
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-4 lg:gap-8">
@@ -88,19 +80,18 @@ const Navbar = () => {
               onMouseEnter={() => setOpenDropdown(link.name)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <button
-                className={`flex items-center gap-1 ${scrolled ? "text-gray-700" : "text-white"
-                  }`}
+              <Link
+                href={link.path || "#"}
+                className={`flex items-center gap-1 ${scrolled ? "text-gray-700" : "text-white"}`}
               >
                 {link.name}
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""
-                    }`}
+                  className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""}`}
                 />
-              </button>
+              </Link>
 
               <div
-                className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border
+                className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border
                 transition-all duration-200
                 ${openDropdown === link.name
                     ? "opacity-100 visible translate-y-0"
@@ -111,7 +102,7 @@ const Navbar = () => {
                   <Link
                     key={idx}
                     href={item.path}
-                    className="block px-4 py-3 text-gray-700 hover:rounded-lg hover:bg-red-50 hover:text-red-600"
+                    className="block px-4 py-3 text-gray-700 text-sm hover:rounded-lg hover:bg-red-50 hover:text-red-600 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -122,8 +113,7 @@ const Navbar = () => {
             <Link
               key={i}
               href={link.path}
-              className={`group flex flex-col gap-0.5 ${scrolled ? "text-gray-700" : "text-white"
-                }`}
+              className={`group flex flex-col gap-0.5 ${scrolled ? "text-gray-700" : "text-white"}`}
             >
               {link.name}
               <div
@@ -154,7 +144,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 w-full h-screen bg-white flex flex-col md:hidden
-        items-center justify-center gap-6 transition-all duration-500
+        items-center justify-center gap-6 transition-all duration-500 overflow-y-auto
         ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <button
@@ -180,17 +170,24 @@ const Navbar = () => {
                 onClick={() =>
                   setOpenDropdown(openDropdown === link.name ? null : link.name)
                 }
-                className="flex items-center gap-1 font-semibold"
+                className="flex items-center gap-1 font-semibold text-lg"
               >
                 {link.name}
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""
-                    }`}
+                  className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""}`}
                 />
               </button>
 
               {openDropdown === link.name && (
                 <div className="flex flex-col items-center gap-2 pl-4">
+                  {/* Main Services Page Link for Mobile */}
+                  <Link 
+                    href={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-red-600 font-medium underline italic"
+                  >
+                    View All {link.name}
+                  </Link>
                   {link.dropdown.map((item, idx) => (
                     <Link
                       key={idx}
@@ -199,7 +196,7 @@ const Navbar = () => {
                         setIsMenuOpen(false);
                         setOpenDropdown(null);
                       }}
-                      className="text-gray-600 hover:text-red-600"
+                      className="text-gray-600 text-sm py-1"
                     >
                       {item.name}
                     </Link>
@@ -211,6 +208,7 @@ const Navbar = () => {
             <Link
               key={i}
               href={link.path}
+              className="text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}

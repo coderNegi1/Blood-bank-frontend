@@ -46,7 +46,7 @@ const App = () => {
       image: "./wbc.webp",
     },
     {
-      id: "prbc",
+      id: "packed-red-blood-cells-dehradun",
       title: "PRBC Blood Services",
       shortTitle: "PRBC",
       desc: "Packed Red Blood Cells processed with high-end technology for maximum efficacy. Available 24x7 for surgeries and trauma cases.",
@@ -60,14 +60,14 @@ const App = () => {
       image: "../SDP.webp",
     },
     {
-      id: "rdp",
+      id: "random-donor-platelets-dehradun",
       title: "Random Donor Platelets",
       shortTitle: "RDP",
       desc: "Platelets separated from individual whole blood units. Essential for maintaining platelet counts in various medical conditions.",
       image: "../RDP.webp",
     },
     {
-      id: "ffp",
+      id: "fresh-frozen-plasma-dehradun",
       title: "Fresh Frozen Plasma",
       shortTitle: "FFP",
       desc: "Rapidly frozen plasma to preserve clotting factors. Essential for liver diseases and severe bleeding management.",
@@ -81,7 +81,7 @@ const App = () => {
     //   image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
     // },
     {
-      id: "cryo",
+      id: "cryoprecipitate-dehradun",
       title: "Cryoprecipitate",
       shortTitle: "CRYO",
       desc: "Concentrated clotting factors derived from plasma. Crucial for treating hemophilia and specific coagulation deficiencies.",
