@@ -13,7 +13,7 @@ const poppins = Poppins({
 export const metadata = {
   title: "Blood Bank Dehradun - Uttarakhand Blood Bank",
   description: "Best blood bank in Dehradun, Uttarakhand. Providing 24/7 emergency blood services, PRBC, Platelets, and FFP. Donate blood, save lives.",
-  alternates: {
+  alternates: { 
     canonical: "https://www.ukbloodcentre.com",
   },
   icons: {
